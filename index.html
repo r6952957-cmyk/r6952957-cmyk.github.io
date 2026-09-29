@@ -1,203 +1,191 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#00103D">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="icon" href="icons/icon-192.png">
-<title>ServiHouse · App de servicio y electrodomésticos</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
+<title>ServiHouse · Servicio técnico y electrodomésticos</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F1F6FF;--card:#fff;--ink:#0F1B33;--mut:#5B6B8A;--pri:#1E6BFF;--soft:#E3EEFF;--ok:#12A150;--warn:#C77700;--line:#D9E5F8;--hero:#00103D;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1226;--card:#121C38;--ink:#EAF1FF;--mut:#9DB0D6;--pri:#5B93FF;--soft:#1A2850;--line:#233560;--ok:#3DD68C;--warn:#F0B44C}}
-:root[data-theme="dark"]{--bg:#0A1226;--card:#121C38;--ink:#EAF1FF;--mut:#9DB0D6;--pri:#5B93FF;--soft:#1A2850;--line:#233560;--ok:#3DD68C;--warn:#F0B44C}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box;margin:0}
-body{background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.45}
-.app{max-width:430px;margin:0 auto;min-height:100vh;padding:0 16px 96px}
-h1{font-size:24px;font-weight:800;letter-spacing:-.4px;line-height:1.15}
-h2{font-size:17px;font-weight:800;margin:22px 0 10px}
-.mut{color:var(--mut);font-size:13px}
-.hero{background:var(--hero);color:#fff;margin:0 -16px;padding:22px 16px 26px;border-radius:0 0 26px 26px}
-.hero .mut{color:#BBD1FF}
-.brand{font-weight:800;font-size:19px;letter-spacing:-.2px;display:flex;align-items:center;gap:8px;margin-bottom:16px}
-.logo{width:46px;height:46px;border-radius:13px;display:block;object-fit:cover}
-.cta{display:inline-block;text-decoration:none;font:800 13px Manrope,sans-serif;padding:10px 16px;border-radius:999px;background:#fff;color:#00103D}
-.cta.o{background:transparent;color:#fff;border:1.5px solid #5B93FF}
-.cta.b{background:var(--pri);color:#fff}
-.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:-22px}
-.act{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 8px;text-align:center;font:700 13px Manrope,sans-serif;color:var(--ink);cursor:pointer}
-.act span{display:block;font-size:26px;margin-bottom:4px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
-.row{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.track{display:flex;gap:6px;margin:12px 0 6px}
-.track i{flex:1;height:6px;border-radius:3px;background:var(--line)}
-.track i.on{background:var(--pri)}
+:root{--navy:#00103D;--blue:#1E6BFF;--ice:#EAF2FF;--ink:#0B1633;--mut:#5C6B8C;--line:#DCE6F7;--ok:#12A150;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+body{background:#F3F7FF;color:var(--ink);font:500 15px/1.45 Sora,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:480px;margin:0 auto;min-height:100vh;padding-bottom:110px;overflow-x:hidden}
+.view{display:none}.view.on{display:block}
+h1{font-size:30px;line-height:1.1;font-weight:800;letter-spacing:-1px}
+h2{font-size:18px;font-weight:800;letter-spacing:-.4px;margin:26px 16px 12px}
+.p{padding:0 16px}.mut{color:var(--mut);font-size:13px}
+#splash{position:fixed;inset:0;background:var(--navy);display:grid;place-items:center;z-index:99}
+#splash img{width:104px;height:104px;border-radius:28px;box-shadow:0 0 0 0 #1E6BFF88;animation:pulse 1.4s var(--ease) infinite}
+@keyframes pulse{to{box-shadow:0 0 0 46px #1E6BFF00}}
+.hero{background:radial-gradient(120% 90% at 100% 0%,#0B3FB8 0%,var(--navy) 62%);color:#fff;padding:calc(20px + env(safe-area-inset-top,0px)) 20px 64px;border-radius:0 0 34px 34px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;margin-bottom:26px}
+.brand img{width:46px;height:46px;border-radius:14px}
+.hero p{color:#BBD1FF;margin:10px 0 18px}
+.btn,.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;font:800 14px Sora,sans-serif;padding:14px 18px;text-decoration:none;cursor:pointer;transition:transform .15s var(--ease)}
+.btn:active,.cta:active,.chip:active,.add:active{transform:scale(.95)}
+.btn{background:var(--blue);color:#fff;width:100%;margin-top:16px}.btn.s{background:var(--ice);color:var(--blue)}
+.cta{background:#fff;color:var(--navy)}.cta.o{background:transparent;color:#fff;border:1.5px solid #4D86FF}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:-40px 16px 0}
+.act{background:#fff;border:0;border-radius:20px;padding:16px 6px;font:800 12.5px Sora,sans-serif;color:var(--ink);box-shadow:0 10px 28px #0B1F5A1F;cursor:pointer;transition:transform .15s var(--ease)}
+.act:active{transform:scale(.94)}.act i{display:block;font-style:normal;font-size:28px;margin-bottom:6px}
+.card{background:#fff;border-radius:20px;padding:16px;box-shadow:0 2px 0 var(--line)}
+.route{background:var(--navy);border-radius:24px;margin:0 16px;padding:18px 16px 14px;color:#fff}
+.route svg{width:100%;height:auto;display:block}
+.steps{display:flex;justify-content:space-between;font-size:11.5px;color:#BBD1FF;text-align:center;margin-top:4px}
+.steps b{display:block;color:#fff;font-size:13px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:9px 14px;font:700 13px Manrope,sans-serif;cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--pri);border-color:var(--pri);color:#fff}
-label{display:block;font-weight:700;font-size:13px;margin:16px 0 8px}
-select,textarea,input{width:100%;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:12px;font:500 15px Manrope,sans-serif}
-textarea{min-height:84px;resize:vertical}
-.btn{width:100%;border:0;border-radius:14px;background:var(--pri);color:#fff;padding:15px;font:800 15px Manrope,sans-serif;margin-top:18px;cursor:pointer}
-.btn.sec{background:var(--soft);color:var(--pri);margin-top:10px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.prod{padding:12px}
-.prod .img{height:84px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:40px;margin-bottom:10px}
-.prod b{display:block;font-size:14px;line-height:1.25;min-height:36px}
-.price{font-weight:800;font-size:17px;margin:6px 0 8px}
-.add{width:100%;border:1.5px solid var(--pri);background:transparent;color:var(--pri);border-radius:10px;padding:8px;font:800 13px Manrope,sans-serif;cursor:pointer}
-.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin:10px 0 6px}
-.bar div{height:100%;background:var(--ok);border-radius:4px}
-.bar.w div{background:var(--warn)}
-.tag{font-size:12px;font-weight:800;padding:3px 9px;border-radius:999px;background:var(--soft);color:var(--pri)}
+.chip{border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:10px 14px;font:700 13px Sora,sans-serif;cursor:pointer;transition:all .2s var(--ease)}
+.chip[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+label{display:block;font-weight:700;font-size:13px;margin:18px 0 8px}
+select,textarea,input{width:100%;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:14px;padding:13px;font:500 15px Sora,sans-serif}
+textarea{min-height:80px;resize:vertical}
+.top{display:flex;justify-content:space-between;align-items:center;padding:calc(22px + env(safe-area-inset-top,0px)) 16px 6px}
+.cartb{border:0;background:var(--navy);color:#fff;border-radius:999px;padding:10px 16px;font:800 13px Sora,sans-serif;cursor:pointer}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+.prod{padding:12px}.prod .img{height:92px;border-radius:14px;background:linear-gradient(140deg,var(--ice),#CFE0FF);display:grid;place-items:center;font-size:44px;margin-bottom:10px}
+.prod b{display:block;font-size:13.5px;line-height:1.25;min-height:34px}
+.price{font-weight:800;font-size:18px;margin:6px 0 8px}
+.add{width:100%;border:1.5px solid var(--blue);background:transparent;color:var(--blue);border-radius:12px;padding:9px;font:800 13px Sora,sans-serif;cursor:pointer;transition:all .2s var(--ease)}
+.add.ok{background:var(--blue);color:#fff}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin:10px 0 6px}.bar div{height:100%;background:var(--ok);border-radius:4px;transform-origin:left}.bar.w div{background:#D98200}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tag{font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;background:var(--ice);color:var(--blue)}
 .stack>*+*{margin-top:10px}
-nav{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px))}
-nav div{max-width:430px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
-nav button{border:0;background:none;color:var(--mut);font:700 11px Manrope,sans-serif;padding:6px;cursor:pointer;position:relative}
-nav button span{display:block;font-size:22px}
-nav button[aria-current="true"]{color:var(--pri)}
-.badge{position:absolute;top:0;left:56%;background:var(--pri);color:#fff;border-radius:999px;font-size:10px;padding:1px 6px}
-.hide{display:none}
-button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
-.ok{text-align:center;padding:26px 16px}
-.ok .big{font-size:44px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
-</head>
-<body>
-<div class="app">
+nav{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:456px;margin:0 auto;background:#fffffff2;backdrop-filter:blur(14px);border-radius:26px;box-shadow:0 12px 40px #0B1F5A38;display:grid;grid-template-columns:repeat(4,1fr);padding:6px;z-index:20}
+#ind{position:absolute;top:6px;bottom:6px;left:6px;width:calc(25% - 3px);background:var(--ice);border-radius:20px;transition:transform .4s var(--ease)}
+nav button{position:relative;border:0;background:none;color:var(--mut);font:700 11px Sora,sans-serif;padding:8px 0;cursor:pointer}
+nav button i{display:block;font-style:normal;font-size:21px}nav button[aria-current=true]{color:var(--blue)}
+#sheet{position:fixed;inset:0;background:#00103D99;display:none;align-items:flex-end;z-index:50}
+#sheet.on{display:flex}
+#sheet .in{background:#fff;width:100%;max-width:480px;margin:0 auto;border-radius:28px 28px 0 0;padding:20px 16px calc(20px + env(safe-area-inset-bottom,0px));max-height:80vh;overflow:auto}
+.qty{display:flex;align-items:center;gap:10px}.qty button{width:32px;height:32px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font:800 16px Sora;cursor:pointer}
+.ok2{text-align:center;padding:22px 14px}.ok2 .big{font-size:46px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.hide{display:none!important}
+</style></head><body>
+<div id="splash"><img src="data:image/jpeg;base64,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" alt="ServiHouse"></div>
+<div class="wrap">
 
-<section id="inicio">
-  <div class="hero">
-    <div class="brand"><img class="logo" src="data:image/jpeg;base64,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" alt="Logo ServiHouse">ServiHouse</div>
-    <h1>Hola, ¿qué necesitas hoy para tu hogar?</h1>
-    <p class="mut" style="margin-top:6px">Servicio técnico, tienda y garantías en un solo lugar.</p>
-    <div class="chips" style="margin-top:16px"><a class="cta" href="https://wa.me/593939195170" target="_blank" rel="noopener">WhatsApp</a><a class="cta o" href="tel:+593939195170">Llamar 0939195170</a></div>
-  </div>
-  <div class="acts">
-    <button class="act" data-go="servicio"><span>🛠️</span>Pedir servicio</button>
-    <button class="act" data-go="tienda"><span>🛒</span>Comprar</button>
-    <button class="act" data-go="garantias"><span>🛡️</span>Garantías</button>
-  </div>
-  <h2>Tu servicio en curso</h2>
-  <div class="card" id="orden">
-    <div class="row"><b>Lavadora · No desagua</b><span class="tag">Orden #4821</span></div>
-    <div class="track"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
-    <p class="mut">Técnico en camino · llega hoy entre 14:00 y 16:00</p>
-  </div>
-  <h2>Atención directa</h2>
-  <div class="card"><b>Elvis Sevilla · ServiHouse</b><p class="mut" style="margin:4px 0 12px">Refrigeradores, lavadoras, estufas, electrónica y aires acondicionados. Escríbenos o llámanos.</p><div class="chips"><a class="cta b" href="https://wa.me/593939195170" target="_blank" rel="noopener">Escribir por WhatsApp</a><a class="cta o" style="color:var(--pri);border-color:var(--pri)" href="tel:+593939195170">0939195170</a></div></div>
-  <h2>Ofertas de la semana</h2>
-  <div class="card row"><div><b>Refrigerador No Frost 300 L</b><p class="mut">10% de descuento y entrega gratis</p></div><span style="font-size:36px">🧊</span></div>
+<section id="inicio" class="view on">
+ <div class="hero">
+  <div class="brand rise"><img src="data:image/jpeg;base64,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" alt="Logo ServiHouse">ServiHouse</div>
+  <h1 class="rise">Tu hogar funcionando, sin complicaciones.</h1>
+  <p class="rise">Técnicos, electrodomésticos y garantías en un solo lugar.</p>
+  <div class="chips rise"><a class="cta" href="https://wa.me/593939195170" target="_blank" rel="noopener">WhatsApp</a><a class="cta o" href="tel:+593939195170">Llamar</a></div>
+ </div>
+ <div class="acts rise">
+  <button class="act" data-go="servicio"><i>🛠️</i>Pedir servicio</button>
+  <button class="act" data-go="tienda"><i>🛒</i>Comprar</button>
+  <button class="act" data-go="garantias"><i>🛡️</i>Garantías</button>
+ </div>
+ <h2 class="rise">Así de fácil</h2>
+ <div class="route rise">
+  <svg viewBox="0 0 320 90" aria-hidden="true"><path id="rp" d="M20 62 C80 62 80 24 140 24 S230 66 300 30" fill="none" stroke="#2F5FD0" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+   <circle cx="20" cy="62" r="7" fill="#fff"/><circle cx="140" cy="24" r="7" fill="#fff"/><circle cx="300" cy="30" r="9" fill="#1E6BFF" stroke="#fff" stroke-width="3"/>
+   <circle r="6" fill="#5B93FF"><animateMotion dur="3.6s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".5 0 .3 1"><mpath href="#rp"/></animateMotion></circle></svg>
+  <div class="steps"><span><b>Pides</b>en la app</span><span><b>Confirmamos</b>por WhatsApp</span><span><b>Llegamos</b>a tu casa</span></div>
+ </div>
+ <h2 class="rise">Lo que reparamos y vendemos</h2>
+ <div class="p rise"><div class="chips"><span class="tag">🧊 Refrigeradores</span><span class="tag">🧺 Lavadoras y secadoras</span><span class="tag">🔥 Estufas y hornos</span><span class="tag">💻 Electrónica y cómputo</span><span class="tag">❄️ Aires acondicionados</span></div></div>
+ <div class="p rise" style="margin-top:22px"><div class="card"><b>Elvis Sevilla · ServiHouse</b><p class="mut" style="margin-top:4px">Atención directa: escríbenos y te respondemos.</p><a class="btn" style="text-decoration:none" href="https://wa.me/593939195170" target="_blank" rel="noopener">Escribir por WhatsApp</a></div></div>
 </section>
 
-<section id="servicio" class="hide">
-  <h1 style="margin-top:22px">Pedir servicio técnico</h1>
-  <p class="mut" style="margin-top:4px">Te enviamos un técnico a domicilio.</p>
-  <div id="form">
-    <label>¿Qué electrodoméstico falló?</label>
-    <div class="chips" data-group="aparato">
-      <button class="chip" aria-pressed="true">🧊 Refrigeradores</button><button class="chip" aria-pressed="false">🧺 Lavadoras y secadoras</button><button class="chip" aria-pressed="false">🔥 Estufas y hornos</button><button class="chip" aria-pressed="false">💻 Electrónica y cómputo</button><button class="chip" aria-pressed="false">❄️ Aires acondicionados</button>
-    </div>
-    <label for="prob">Problema</label>
-    <select id="prob"><option>No enciende</option><option>Hace ruido</option><option>Gotea o no desagua</option><option>No enfría / no calienta</option><option>Otro</option></select>
-    <label for="det">Detalles (opcional)</label>
-    <textarea id="det" placeholder="Cuéntanos qué pasa"></textarea>
-    <label>Fecha de la visita</label>
-    <div class="chips" data-group="fecha">
-      <button class="chip" aria-pressed="true">Hoy</button><button class="chip" aria-pressed="false">Mañana</button><button class="chip" aria-pressed="false">Pasado mañana</button>
-    </div>
-    <label>Horario</label>
-    <div class="chips" data-group="hora">
-      <button class="chip" aria-pressed="true">8:00 – 12:00</button><button class="chip" aria-pressed="false">12:00 – 16:00</button><button class="chip" aria-pressed="false">16:00 – 19:00</button>
-    </div>
-    <button class="btn" id="enviar">Solicitar visita técnica</button>
-  </div>
-  <div id="conf" class="card ok hide">
-    <div class="big">✅</div>
-    <h2 style="margin:8px 0 4px">Visita solicitada</h2>
-    <p class="mut" id="confTxt"></p>
-    <button class="btn" data-go="inicio">Ver mi orden</button>
-    <a class="btn sec" style="display:block;text-decoration:none" href="https://wa.me/593939195170" target="_blank" rel="noopener">Coordinar por WhatsApp</a>
-    <button class="btn sec" id="otra">Pedir otro servicio</button>
-  </div>
+<section id="servicio" class="view">
+ <div class="top"><h1 class="rise">Pedir servicio técnico</h1></div>
+ <div class="p">
+ <p class="mut rise">Cuéntanos qué pasó y coordinamos la visita.</p>
+ <div id="form">
+  <label class="rise">¿Qué electrodoméstico falló?</label>
+  <div class="chips rise" data-g="ap"><button class="chip" aria-pressed="true">🧊 Refrigeradores</button><button class="chip" aria-pressed="false">🧺 Lavadoras y secadoras</button><button class="chip" aria-pressed="false">🔥 Estufas y hornos</button><button class="chip" aria-pressed="false">💻 Electrónica y cómputo</button><button class="chip" aria-pressed="false">❄️ Aires acondicionados</button></div>
+  <label class="rise" for="prob">Problema</label>
+  <select id="prob" class="rise"><option>No enciende</option><option>Hace ruido</option><option>Gotea o no desagua</option><option>No enfría / no calienta</option><option>Otro</option></select>
+  <label class="rise" for="det">Detalles (opcional)</label>
+  <textarea id="det" class="rise" placeholder="Cuéntanos qué pasa"></textarea>
+  <label class="rise">Fecha de la visita</label>
+  <div class="chips rise" data-g="fe"><button class="chip" aria-pressed="true">Hoy</button><button class="chip" aria-pressed="false">Mañana</button><button class="chip" aria-pressed="false">Pasado mañana</button></div>
+  <label class="rise">Horario</label>
+  <div class="chips rise" data-g="ho"><button class="chip" aria-pressed="true">8:00 – 12:00</button><button class="chip" aria-pressed="false">12:00 – 16:00</button><button class="chip" aria-pressed="false">16:00 – 19:00</button></div>
+  <label class="rise" for="dir">Dirección o sector</label>
+  <input id="dir" class="rise" placeholder="Ej. Sur de Quito, Cdla. …" autocomplete="street-address">
+  <button class="btn rise" id="enviar">Continuar</button>
+ </div>
+ <div id="conf" class="card ok2 hide"><div class="big">✅</div><h2 style="margin:8px 0 4px">Solicitud lista</h2><p class="mut" id="ct"></p>
+  <a class="btn" id="wa1" style="text-decoration:none" target="_blank" rel="noopener">Enviar por WhatsApp para confirmar</a>
+  <button class="btn s" id="otra">Editar solicitud</button></div>
+ </div>
 </section>
 
-<section id="tienda" class="hide">
-  <h1 style="margin-top:22px">Tienda</h1>
-  <div class="chips" data-group="cat" style="margin:12px 0">
-    <button class="chip" aria-pressed="true">Todos</button><button class="chip" aria-pressed="false">Refrigeradores</button><button class="chip" aria-pressed="false">Lavadoras y secadoras</button><button class="chip" aria-pressed="false">Estufas y hornos</button><button class="chip" aria-pressed="false">Electrónica y cómputo</button><button class="chip" aria-pressed="false">Aires acondicionados</button>
-  </div>
-  <div class="grid" id="prods"></div>
+<section id="tienda" class="view">
+ <div class="top"><h1 class="rise">Tienda</h1><button class="cartb rise" id="cartb">🛒 <span id="cn">0</span></button></div>
+ <div class="p rise" style="margin:10px 0 14px"><div class="chips" data-g="cat"><button class="chip" aria-pressed="true">Todos</button><button class="chip" aria-pressed="false">Refrigeradores</button><button class="chip" aria-pressed="false">Lavadoras y secadoras</button><button class="chip" aria-pressed="false">Estufas y hornos</button><button class="chip" aria-pressed="false">Electrónica y cómputo</button><button class="chip" aria-pressed="false">Aires acondicionados</button></div></div>
+ <div class="grid" id="prods"></div>
 </section>
 
-<section id="garantias" class="hide">
-  <h1 style="margin-top:22px">Mis garantías</h1>
-  <p class="mut" style="margin-top:4px">Consulta cuánto te queda de cobertura.</p>
-  <div class="stack" id="gars" style="margin-top:14px"></div>
-  <label for="serie">Registrar un producto nuevo</label>
-  <input id="serie" placeholder="Número de serie" autocomplete="off">
-  <button class="btn sec" id="reg">Registrar producto</button>
-  <p class="mut" id="regMsg" style="margin-top:8px"></p>
+<section id="garantias" class="view">
+ <div class="top"><h1 class="rise">Mis garantías</h1></div>
+ <div class="p"><p class="mut rise">Registra tus compras y ve cuánto te queda de cobertura.</p>
+ <div class="stack rise" id="gars" style="margin-top:14px"></div>
+ <label class="rise">Registrar un producto</label>
+ <input id="gn" class="rise" placeholder="Producto (ej. Lavadora 10 kg)">
+ <div class="row rise" style="margin-top:10px;align-items:stretch"><input id="gd" type="date"><select id="gm" style="width:42%"><option value="12">12 meses</option><option value="24">24 meses</option><option value="36">36 meses</option></select></div>
+ <button class="btn s rise" id="reg">Guardar producto</button><p class="mut" id="rm" style="margin-top:8px"></p></div>
 </section>
-
 </div>
 
-<nav><div>
-  <button data-go="inicio" aria-current="true"><span>🏠</span>Inicio</button>
-  <button data-go="servicio"><span>🛠️</span>Servicio</button>
-  <button data-go="tienda"><span>🛒</span>Tienda<em class="badge hide" id="cnt" style="font-style:normal">0</em></button>
-  <button data-go="garantias"><span>🛡️</span>Garantías</button>
-</div></nav>
+<nav><div id="ind"></div>
+ <button data-go="inicio" aria-current="true"><i>🏠</i>Inicio</button><button data-go="servicio"><i>🛠️</i>Servicio</button><button data-go="tienda"><i>🛒</i>Tienda</button><button data-go="garantias"><i>🛡️</i>Garantías</button></nav>
+<div id="sheet"><div class="in"><div class="row"><h2 style="margin:0">Tu pedido</h2><button class="cartb" id="cx">Cerrar</button></div><div id="cl" class="stack" style="margin-top:14px"></div><a class="btn" id="wa2" style="text-decoration:none" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a></div></div>
 
 <script>
+var $=function(s){return document.querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))};
+var WA='593939195170',RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function an(e,k,o){if(RM||!e.animate)return;return e.animate(k,Object.assign({duration:460,easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'},o||{}))}
+function rise(id){$$('#'+id+' .rise').forEach(function(e,i){an(e,[{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'none'}],{delay:i*40})})}
+var ids=['inicio','servicio','tienda','garantias'];
+function go(id){$$('.view').forEach(function(v){v.classList.toggle('on',v.id===id)});
+ $$('nav button').forEach(function(b){b.setAttribute('aria-current',b.dataset.go===id)});
+ $('#ind').style.transform='translateX('+ids.indexOf(id)*100+'%)';window.scrollTo(0,0);rise(id);if(id==='garantias')gars()}
+document.addEventListener('click',function(e){var g=e.target.closest('[data-go]');if(g)return go(g.dataset.go);
+ var c=e.target.closest('.chip');if(c){var p=c.parentElement;$$('[data-g="'+p.dataset.g+'"] .chip').forEach(function(x){x.setAttribute('aria-pressed',x===c)});if(p.dataset.g==='cat'){cat=c.textContent;prods()}}});
+function sel(g){return $('[data-g="'+g+'"] [aria-pressed="true"]').textContent}
+function wa(t){return'https://wa.me/'+WA+'?text='+encodeURIComponent(t)}
+/* Servicio */
+$('#enviar').onclick=function(){var d=$('#det').value.trim(),dir=$('#dir').value.trim();
+ var t='Hola ServiHouse, quiero solicitar servicio técnico.\nEquipo: '+sel('ap')+'\nProblema: '+$('#prob').value+(d?'\nDetalles: '+d:'')+'\nVisita: '+sel('fe')+', '+sel('ho')+(dir?'\nDirección: '+dir:'');
+ $('#ct').textContent=sel('ap')+' · '+$('#prob').value+'. '+sel('fe')+', '+sel('ho')+'.';$('#wa1').href=wa(t);
+ $('#form').classList.add('hide');$('#conf').classList.remove('hide');an($('#conf'),[{opacity:0,transform:'scale(.94)'},{opacity:1,transform:'none'}])};
+$('#otra').onclick=function(){$('#conf').classList.add('hide');$('#form').classList.remove('hide')};
+/* Tienda */
 var P=[["🧊","Refrigerador No Frost 300 L",699,"Refrigeradores"],["🧊","Refrigerador 2 puertas 420 L",899,"Refrigeradores"],["🧺","Lavadora carga frontal 10 kg",549,"Lavadoras y secadoras"],["🌀","Secadora 9 kg",499,"Lavadoras y secadoras"],["🔥","Estufa 4 hornillas con horno",329,"Estufas y hornos"],["♨️","Horno empotrable eléctrico",389,"Estufas y hornos"],["💻","Laptop 15.6 pulgadas",599,"Electrónica y cómputo"],["📺","Smart TV 50 pulgadas",429,"Electrónica y cómputo"],["❄️","Aire acondicionado 12000 BTU",459,"Aires acondicionados"],["❄️","Aire acondicionado 18000 BTU",629,"Aires acondicionados"]];
-var G=[["🧺","Lavadora carga frontal 10 kg",214,365],["🧊","Refrigerador No Frost 300 L",38,730],["🔥","Estufa 4 hornillas con horno",480,730]];
-var cart=0,cat="Todos";
-function $(s){return document.querySelector(s)}
-function go(id){
-  document.querySelectorAll("section").forEach(function(s){s.classList.toggle("hide",s.id!==id)});
-  document.querySelectorAll("nav button").forEach(function(b){b.setAttribute("aria-current",b.dataset.go===id)});
-  window.scrollTo(0,0);
-}
-document.addEventListener("click",function(e){
-  var g=e.target.closest("[data-go]");if(g){go(g.dataset.go);return}
-  var c=e.target.closest(".chip");
-  if(c){var grp=c.parentElement;grp.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",x===c)});
-    if(grp.dataset.group==="cat"){cat=c.textContent;renderProds()}}
-});
-function sel(g){return document.querySelector('[data-group="'+g+'"] [aria-pressed="true"]').textContent}
-function renderProds(){
-  $("#prods").innerHTML=P.filter(function(p){return cat==="Todos"||p[3]===cat}).map(function(p,i){
-    return '<div class="card prod"><div class="img">'+p[0]+'</div><b>'+p[1]+'</b><div class="price">$'+p[2]+'</div><button class="add" data-i="'+i+'">Agregar al carrito</button></div>'}).join("");
-}
-$("#prods").addEventListener("click",function(e){
-  var b=e.target.closest(".add");if(!b)return;
-  cart++;$("#cnt").textContent=cart;$("#cnt").classList.remove("hide");
-  b.textContent="Agregado ✓";setTimeout(function(){b.textContent="Agregar al carrito"},1200);
-});
-function renderGars(){
-  $("#gars").innerHTML=G.map(function(g){
-    var pct=Math.round(g[2]/g[3]*100),w=g[2]<60;
-    return '<div class="card"><div class="row"><b>'+g[0]+' '+g[1]+'</b><span class="tag">'+(w?"Por vencer":"Vigente")+'</span></div><div class="bar'+(w?" w":"")+'"><div style="width:'+pct+'%"></div></div><p class="mut">Te quedan '+g[2]+' días de garantía</p></div>'}).join("");
-}
-$("#enviar").addEventListener("click",function(){
-  $("#form").classList.add("hide");$("#conf").classList.remove("hide");
-  $("#confTxt").textContent=sel("aparato")+" · "+$("#prob").value+". Visita: "+sel("fecha").toLowerCase()+", "+sel("hora")+".";
-  $("#orden").innerHTML='<div class="row"><b>'+sel("aparato").replace(/^\S+\s/,"")+' · '+$("#prob").value+'</b><span class="tag">Orden #4822</span></div><div class="track"><i class="on"></i><i></i><i></i><i></i></div><p class="mut">Solicitud recibida · te confirmaremos el técnico</p>';
-});
-$("#otra").addEventListener("click",function(){$("#conf").classList.add("hide");$("#form").classList.remove("hide")});
-$("#reg").addEventListener("click",function(){
-  var v=$("#serie").value.trim();
-  $("#regMsg").textContent=v?"Producto "+v+" registrado. Ya aparece en tu lista de garantías.":"Escribe el número de serie que está en la etiqueta del equipo.";
-  if(v){G.push(["📦","Producto "+v,730,730]);renderGars();$("#serie").value=""}
-});
-renderProds();renderGars();
+var cart={},cat='Todos';
+function prods(){$('#prods').innerHTML=P.map(function(p,i){return(cat==='Todos'||p[3]===cat)?'<div class="card prod"><div class="img">'+p[0]+'</div><b>'+p[1]+'</b><div class="price">$'+p[2]+'</div><button class="add" data-i="'+i+'">Agregar</button></div>':''}).join('');
+ $$('#prods .prod').forEach(function(e,i){an(e,[{opacity:0,transform:'translateY(18px) scale(.97)'},{opacity:1,transform:'none'}],{delay:i*45})})}
+function count(){var n=0;for(var k in cart)n+=cart[k];$('#cn').textContent=n;return n}
+$('#prods').onclick=function(e){var b=e.target.closest('.add');if(!b)return;var i=b.dataset.i;cart[i]=(cart[i]||0)+1;count();
+ b.textContent='Agregado ✓';b.classList.add('ok');an($('#cartb'),[{transform:'scale(1)'},{transform:'scale(1.18)'},{transform:'scale(1)'}],{duration:320});
+ setTimeout(function(){b.textContent='Agregar';b.classList.remove('ok')},1100)};
+function sheet(){var t=0,h='',m='Hola ServiHouse, quiero hacer este pedido:\n';
+ for(var k in cart){if(!cart[k])continue;var p=P[k],s=p[2]*cart[k];t+=s;m+='- '+cart[k]+' x '+p[1]+' ($'+s+')\n';
+  h+='<div class="row"><div><b style="font-size:14px">'+p[1]+'</b><div class="mut">$'+p[2]+' c/u</div></div><div class="qty"><button data-q="-'+k+'">−</button><b>'+cart[k]+'</b><button data-q="+'+k+'">+</button></div></div>'}
+ $('#cl').innerHTML=h?h+'<div class="row" style="padding-top:8px"><b>Total</b><b style="font-size:20px">$'+t+'</b></div>':'<p class="mut">Tu carrito está vacío. Agrega productos desde la tienda.</p>';
+ $('#wa2').classList.toggle('hide',!h);$('#wa2').href=wa(m+'Total: $'+t)}
+$('#cartb').onclick=function(){sheet();$('#sheet').classList.add('on');an($('#sheet .in'),[{transform:'translateY(100%)'},{transform:'none'}])};
+$('#cx').onclick=function(){$('#sheet').classList.remove('on')};
+$('#sheet').onclick=function(e){if(e.target.id==='sheet')$('#sheet').classList.remove('on');var q=e.target.closest('[data-q]');if(q){var k=q.dataset.q.slice(1);cart[k]=Math.max(0,cart[k]+(q.dataset.q[0]==='+'?1:-1));count();sheet()}};
+/* Garantías */
+function load(){try{return JSON.parse(localStorage.getItem('sh_g')||'[]')}catch(e){return[]}}
+function gars(){var L=load(),now=Date.now();
+ $('#gars').innerHTML=L.length?L.map(function(g){var end=new Date(g.d);end.setMonth(end.getMonth()+g.m);var left=Math.ceil((end-now)/864e5),tot=g.m*30.4,pct=Math.max(0,Math.min(1,left/tot)),w=left<60;
+  return'<div class="card"><div class="row"><b>'+g.n.replace(/</g,'&lt;')+'</b><span class="tag">'+(left<=0?'Vencida':w?'Por vencer':'Vigente')+'</span></div><div class="bar'+(w?' w':'')+'"><div style="width:'+pct*100+'%"></div></div><p class="mut">'+(left>0?'Te quedan '+left+' días de garantía':'La garantía terminó')+'</p></div>'}).join(''):'<div class="card"><b>Aún no tienes productos</b><p class="mut">Registra tu primera compra abajo y te mostramos cuánto dura su garantía.</p></div>';
+ $$('#gars .bar div').forEach(function(e,i){an(e,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:900,delay:200+i*120})})}
+$('#reg').onclick=function(){var n=$('#gn').value.trim(),d=$('#gd').value;if(!n||!d){$('#rm').textContent='Escribe el producto y la fecha de compra.';return}
+ var L=load();L.push({n:n,d:d,m:+$('#gm').value});try{localStorage.setItem('sh_g',JSON.stringify(L))}catch(e){}
+ $('#gn').value='';$('#rm').textContent='Producto guardado en este teléfono.';gars()};
+if(RM){var s=document.querySelector('svg');if(s&&s.pauseAnimations)s.pauseAnimations()}
+prods();
+window.addEventListener('load',function(){setTimeout(function(){var s=$('#splash');var a=an(s,[{opacity:1},{opacity:0}],{duration:450,fill:'forwards'});if(a)a.onfinish=function(){s.remove()};else s.remove();rise('inicio')},RM?0:900)});
 if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
-</script>
-</body>
-</html>
+</script></body></html>
