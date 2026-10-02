@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://r6952957-cmykgithubio.vercel.app/sitemap.xml
+Sitemap: https://servihouse.vercel.app/sitemap.xml

@@ -1,17 +1,33 @@
 {
+  "id": "/",
   "name": "ServiHouse",
   "short_name": "ServiHouse",
-  "description": "Servicio técnico, tienda y garantías de electrodomésticos",
-  "lang": "es",
-  "start_url": "./index.html",
-  "scope": "./",
+  "description": "Servicio técnico de línea blanca, electrónica y refrigeración a domicilio",
+  "lang": "es-EC",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#00103D",
-  "theme_color": "#00103D",
+  "background_color": "#050B1F",
+  "theme_color": "#050B1F",
   "icons": [
-    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
