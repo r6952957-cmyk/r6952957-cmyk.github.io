@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "ec.servihouse.app",
+        "sha256_cert_fingerprints": ["BB:7E:0E:79:27:AF:4D:EE:07:7A:67:60:01:2F:E9:4A:59:5E:E7:DD:8E:91:F8:9C:D8:7C:41:63:D4:E5:75:FB"]
+      }
+    }]
