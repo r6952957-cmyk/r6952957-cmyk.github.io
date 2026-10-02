@@ -2,234 +2,215 @@
 <html lang="es"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#030816">
-<title>ServiHouse | Servicio técnico de línea blanca y electrónica a domicilio</title>
-<meta name="description" content="Reparación y mantenimiento de refrigeradoras, lavadoras, secadoras, cocinas, aires acondicionados, cuartos fríos y electrónica. Servicio a domicilio en Quito, valles y fuera de la ciudad.">
+<meta name="theme-color" content="#00103D">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/icon-192.png">
+<title>ServiHouse | Servicio técnico y venta de equipos de segunda mano</title>
+<meta name="description" content="Reparación, energía renovable y venta de equipos de segunda mano: refrigeradores, lavadoras, estufas, electrónica y aires acondicionados. Pide tu servicio técnico por WhatsApp.">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<link rel="canonical" href="https://servihouse.vercel.app/">
+<link rel="canonical" href="https://r6952957-cmykgithubio.vercel.app/">
 <meta property="og:type" content="website"><meta property="og:locale" content="es_EC"><meta property="og:site_name" content="ServiHouse">
-<meta property="og:title" content="ServiHouse | Servicio técnico de línea blanca y electrónica"><meta property="og:description" content="Técnicos especializados a domicilio. Garantía en todos nuestros servicios.">
-<meta property="og:url" content="https://servihouse.vercel.app/"><meta property="og:image" content="https://servihouse.vercel.app/icons/icon-512.png">
-<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"><link rel="icon" href="/icons/icon-192.png">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"ServiHouse","description":"Servicio técnico a domicilio de línea blanca, electrónica, aires acondicionados y refrigeración.","url":"https://servihouse.vercel.app/","telephone":"+593939195170","image":"https://servihouse.vercel.app/icons/icon-512.png","logo":"https://servihouse.vercel.app/icons/icon-512.png","areaServed":["Quito","Valles de Quito"]}</script>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<meta property="og:title" content="ServiHouse | Servicio técnico y venta de electrodomésticos"><meta property="og:description" content="Reparación y venta de refrigeradores, lavadoras, secadoras, estufas, hornos, electrónica y aires acondicionados. Pide tu servicio técnico por WhatsApp.">
+<meta property="og:url" content="https://r6952957-cmykgithubio.vercel.app/"><meta property="og:image" content="https://r6952957-cmykgithubio.vercel.app/icons/icon-512.png">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="ServiHouse | Servicio técnico y electrodomésticos"><meta name="twitter:image" content="https://r6952957-cmykgithubio.vercel.app/icons/icon-512.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "ServiHouse", "description": "Reparación y venta de refrigeradores, lavadoras, secadoras, estufas, hornos, electrónica y aires acondicionados. Pide tu servicio técnico por WhatsApp.", "url": "https://r6952957-cmykgithubio.vercel.app/", "telephone": "+593939195170", "image": "https://r6952957-cmykgithubio.vercel.app/icons/icon-512.png", "logo": "https://r6952957-cmykgithubio.vercel.app/icons/icon-512.png"}</script>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#030816;--s1:#08122B;--s2:#0D1B42;--line:#18295A;--blue:#2F7BFF;--glow:#5BA2FF;--cy:#38E1FF;--txt:#EAF0FF;--mut:#8EA0C8;--sil:#C9D3E6;--wa:#22C55E;--e:cubic-bezier(.2,.8,.2,1)}
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{background:var(--bg);color:var(--txt);font:400 16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:calc(82px + env(safe-area-inset-bottom,0px));overflow-x:hidden}
-img,video,canvas{display:block;max-width:100%}a{color:inherit;text-decoration:none}
-h1,h2,h3,.sora{font-family:Sora,"DM Sans",system-ui,sans-serif;letter-spacing:-.03em;line-height:1.08}
-.w{max-width:1120px;margin:0 auto;padding:0 20px}section{padding:76px 0;position:relative}
-.eb{font:700 12px/1 "DM Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--cy);margin-bottom:14px;display:flex;align-items:center;gap:10px}.eb:before{content:"";width:24px;height:2px;background:linear-gradient(90deg,var(--blue),var(--cy))}
-h2{font-size:clamp(28px,6vw,46px);font-weight:800;margin-bottom:12px}.lead{color:var(--mut);max-width:560px}
-#pg{position:fixed;top:0;left:0;right:0;height:3px;z-index:60;background:linear-gradient(90deg,var(--blue),var(--cy));transform:scaleX(0);transform-origin:left}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;padding:15px 26px;font:700 15px "DM Sans",sans-serif;cursor:pointer;transition:transform .25s var(--e),box-shadow .25s,background .25s;position:relative;overflow:hidden}
-.btn:active{transform:scale(.96)}.btn:hover{transform:translateY(-2px)}
-.b1{background:linear-gradient(135deg,#2F7BFF,#1B5FE0);color:#fff;box-shadow:0 10px 34px #2F7BFF66}.b1:hover{box-shadow:0 16px 44px #2F7BFF99}
-.b1:after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,#ffffff55,transparent);transform:skewX(-20deg);animation:sh 3.6s infinite}
-@keyframes sh{40%,100%{left:160%}}
-.b2{background:#ffffff08;color:var(--txt);border:1.5px solid var(--line)}.b3{background:var(--wa);color:#04210F}
-header{position:sticky;top:0;z-index:50;background:#030816cc;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff10;padding-top:env(safe-area-inset-top,0px)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{display:flex;align-items:center;gap:11px;font:800 19px Sora,sans-serif;letter-spacing:-.03em}.logo img{width:38px;height:38px;border-radius:11px;box-shadow:0 0 18px #2F7BFF66}.logo b{color:var(--glow)}
-.nav .btn{padding:10px 18px;font-size:14px}.links{display:none;gap:28px;color:var(--mut);font-weight:500;font-size:15px}.links a:hover{color:#fff}
-@media(min-width:860px){.links{display:flex}}
-.hero{padding:40px 0 70px;overflow:hidden;position:relative}
-.hero .spot{position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,70%) var(--my,30%),#2F7BFF33,transparent 60%);pointer-events:none}
-.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff09 1px,transparent 1px),linear-gradient(90deg,#ffffff09 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(ellipse at 70% 30%,#000,transparent 72%);mask-image:radial-gradient(ellipse at 70% 30%,#000,transparent 72%);pointer-events:none}
-.hg{position:relative;z-index:1;display:grid;gap:28px;align-items:center}@media(min-width:900px){.hg{grid-template-columns:1.05fr .95fr}}
-.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:#08122B99;border-radius:999px;padding:8px 16px;font-size:13px;color:var(--sil);margin-bottom:22px}
-.pill i{width:8px;height:8px;border-radius:50%;background:#34D399;animation:pu 2s infinite}@keyframes pu{0%{box-shadow:0 0 0 0 #34D399aa}100%{box-shadow:0 0 0 10px #34D39900}}
-h1{font-size:clamp(36px,8.6vw,68px);font-weight:800;margin-bottom:20px;perspective:700px}
-.wd{display:inline-block}.js .wd{opacity:0;animation:wd .9s var(--e) forwards;animation-delay:calc(.1s + var(--i)*.08s)}
-@keyframes wd{from{opacity:0;transform:translateY(.7em) rotateX(-70deg);filter:blur(10px)}to{opacity:1;transform:none;filter:none}}
-h1 em{font-style:normal}h1 em .wd{background:linear-gradient(100deg,#fff,var(--cy) 55%,var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0}
-.tr{display:flex;flex-wrap:wrap;gap:22px 38px}.tr b{display:block;font:800 26px Sora,sans-serif}.tr span{font-size:13px;color:var(--mut)}
-.gz{position:relative;aspect-ratio:1/1;width:100%;max-width:520px;margin:0 auto}
-#g3d{width:100%;height:100%}
-.fl{position:absolute;display:flex;align-items:center;gap:10px;background:#08122Bd9;backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:13px;box-shadow:0 14px 40px #0009;animation:fy 5s ease-in-out infinite}
-.fl b{display:block;font:700 13px Sora,sans-serif}.fl span{color:var(--mut);font-size:12px}.fl i{font-style:normal;font-size:20px}
-.f1{left:0;top:12%}.f2{right:0;bottom:14%;animation-delay:-2.4s}@keyframes fy{50%{transform:translateY(-12px)}}
-.mq{overflow:hidden;border-block:1px solid #ffffff0f;background:#08122B77;padding:18px 0}
-.mt{display:flex;width:max-content;gap:44px;animation:mq 26s linear infinite;color:#6F82B0;font:800 15px Sora,sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}.mt i{font-style:normal;color:var(--blue)}
-@keyframes mq{to{transform:translateX(-50%)}}
-.st4{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:-1px}@media(min-width:760px){.st4{grid-template-columns:repeat(4,1fr)}}
-.sn{border:1px solid var(--line);border-radius:18px;padding:22px;background:linear-gradient(160deg,var(--s2),var(--s1))}.sn b{font:800 40px Sora,sans-serif;background:linear-gradient(120deg,#fff,var(--cy));-webkit-background-clip:text;background-clip:text;color:transparent}.sn span{display:block;color:var(--mut);font-size:14px}
-.sg{display:grid;gap:16px;margin-top:38px;grid-template-columns:1fr}@media(min-width:640px){.sg{grid-template-columns:repeat(2,1fr)}}@media(min-width:960px){.sg{grid-template-columns:repeat(3,1fr)}}
-.sc{position:relative;border:1px solid var(--line);border-radius:22px;padding:26px;background:linear-gradient(160deg,var(--s2),var(--s1));overflow:hidden;transition:transform .2s ease-out,border-color .3s;transform-style:preserve-3d;will-change:transform}
-.sc:after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--gx,50%) var(--gy,50%),#5BA2FF2e,transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}.sc:hover{border-color:var(--blue)}.sc:hover:after{opacity:1}
-.sc svg{width:58px;height:58px;stroke:var(--cy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:18px;filter:drop-shadow(0 0 8px #38E1FF88);transform:translateZ(40px)}
-.js .sc svg *{stroke-dasharray:140;stroke-dashoffset:140;transition:stroke-dashoffset 1.4s var(--e) .2s}.js .sc.in svg *{stroke-dashoffset:0}
-.sc h3{font-size:21px;font-weight:600;margin-bottom:8px;transform:translateZ(24px)}.sc p{color:var(--mut);font-size:15px;transform:translateZ(14px)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}.chips span{border:1px solid var(--line);background:var(--s1);border-radius:999px;padding:9px 16px;font-size:14px;color:var(--sil)}
-.band{padding:0;height:min(70vh,520px);overflow:hidden;display:flex;align-items:center}
-.band img{position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover;will-change:transform}
-.band:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#030816f2 8%,#030816a0 60%,#03081640)}
-.band .w{position:relative;z-index:2}.band h2{max-width:620px}
-.stage{perspective:1300px;height:340px;margin-top:30px;position:relative;touch-action:pan-y;cursor:grab;-webkit-user-select:none;user-select:none}
-.ring{position:absolute;left:50%;top:50%;width:200px;height:270px;margin:-135px 0 0 -100px;transform-style:preserve-3d}
-.it{position:absolute;inset:0;border-radius:18px;overflow:hidden;border:1px solid #5BA2FF55;backface-visibility:hidden;box-shadow:0 0 40px #2F7BFF30;background:var(--s1)}
-.it img{width:100%;height:100%;object-fit:cover;pointer-events:none}.it span{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:13px;background:linear-gradient(transparent,#030816ee)}
-@media(min-width:700px){.stage{height:420px}.ring{width:250px;height:340px;margin:-170px 0 0 -125px}}
-.steps{position:relative;display:grid;gap:16px;margin-top:38px;padding-left:46px}@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr);padding:56px 0 0}}
-.ln{position:absolute;left:19px;top:6px;bottom:6px;width:2px;background:#18295A;border-radius:2px}.ln:after{content:"";position:absolute;inset:0;background:linear-gradient(var(--blue),var(--cy));transform-origin:top;transform:scaleY(var(--p,0));box-shadow:0 0 14px var(--cy)}
-@media(min-width:760px){.ln{left:6%;right:6%;top:18px;bottom:auto;height:2px;width:auto}.ln:after{transform-origin:left;transform:scaleX(var(--p,0))}}
-.st{position:relative;border:1px solid var(--line);border-radius:20px;padding:26px;background:linear-gradient(160deg,var(--s2),var(--s1))}
-.st b{position:absolute;left:-46px;top:20px;width:40px;height:40px;border-radius:50%;background:var(--s1);border:2px solid var(--blue);display:grid;place-items:center;font:800 14px Sora,sans-serif;color:var(--cy);box-shadow:0 0 18px #2F7BFF66}
-@media(min-width:760px){.st b{left:26px;top:-56px}}.st h3{font-size:20px;margin-bottom:8px}.st p{color:var(--mut);font-size:15px}
-.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 20px 8px;margin:0 -20px;scrollbar-width:none}.rail::-webkit-scrollbar{display:none}
-.rail figure{flex:none;scroll-snap-align:start;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--s1)}.rail video{width:230px;height:410px;object-fit:cover;background:#000}
-.cap{padding:11px 14px;font-size:13.5px;color:var(--sil)}
-.ct{display:grid;gap:28px;border:1px solid var(--line);border-radius:28px;padding:30px 22px;background:radial-gradient(120% 120% at 100% 0,#2F7BFF35,transparent 55%),var(--s1)}@media(min-width:860px){.ct{grid-template-columns:1fr 1fr;padding:48px}}
-.f{display:grid;gap:12px}label{font-size:13px;color:var(--mut);display:block;margin-bottom:6px}
-input,select,textarea{width:100%;background:#030816;border:1.5px solid var(--line);color:var(--txt);border-radius:12px;padding:14px;font:400 16px "DM Sans",sans-serif}input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px #2F7BFF28}textarea{min-height:90px;resize:vertical}
-.cl{display:grid;gap:12px;margin-top:22px}.cl a{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#030816aa;font-weight:700}.cl small{display:block;color:var(--mut);font-weight:400;font-size:13px}
-details{border-bottom:1px solid var(--line);padding:20px 0}summary{cursor:pointer;font:600 18px Sora,sans-serif;list-style:none;display:flex;justify-content:space-between;gap:16px}summary::-webkit-details-marker{display:none}summary:after{content:"+";color:var(--cy);font-size:26px;line-height:1}details[open] summary:after{content:"–"}details p{color:var(--mut);margin-top:12px;max-width:640px}
-footer{border-top:1px solid #ffffff10;padding:38px 0;color:var(--mut);font-size:14px}.fw{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:center}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:55;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:#030816ee;backdrop-filter:blur(16px);border-top:1px solid #ffffff12}.bar a{flex:1;text-align:center;padding:13px 6px;border-radius:12px;font:700 14px "DM Sans",sans-serif}
-@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--e),transform .9s var(--e)}.js .rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.js .rv,.js .wd{opacity:1;transform:none;transition:none;animation:none;filter:none}.mt,.fl,.pill i,.b1:after{animation:none}html{scroll-behavior:auto}.js .sc svg *{stroke-dashoffset:0}}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+:root{--navy:#00103D;--blue:#1E6BFF;--ice:#EAF2FF;--ink:#0B1633;--mut:#5C6B8C;--line:#DCE6F7;--ok:#12A150;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+body{background:#F3F7FF;color:var(--ink);font:500 15px/1.45 Sora,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:480px;margin:0 auto;min-height:100vh;padding-bottom:110px;overflow-x:hidden}
+.view{display:none}.view.on{display:block}
+h1{font-size:30px;line-height:1.1;font-weight:800;letter-spacing:-1px}
+h2{font-size:18px;font-weight:800;letter-spacing:-.4px;margin:26px 16px 12px}
+.p{padding:0 16px}.mut{color:var(--mut);font-size:13px}
+#splash{position:fixed;inset:0;background:var(--navy);display:grid;place-items:center;z-index:99}
+#splash img{width:104px;height:104px;border-radius:28px;box-shadow:0 0 0 0 #1E6BFF88;animation:pulse 1.4s var(--ease) infinite}
+@keyframes pulse{to{box-shadow:0 0 0 46px #1E6BFF00}}
+.hero{background:radial-gradient(120% 90% at 100% 0%,#0B3FB8 0%,var(--navy) 62%);color:#fff;padding:calc(20px + env(safe-area-inset-top,0px)) 20px 64px;border-radius:0 0 34px 34px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;margin-bottom:26px}
+.brand img{width:46px;height:46px;border-radius:14px}
+.hero p{color:#BBD1FF;margin:10px 0 18px}
+.btn,.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:14px;font:800 14px Sora,sans-serif;padding:14px 18px;text-decoration:none;cursor:pointer;transition:transform .15s var(--ease)}
+.btn:active,.cta:active,.chip:active,.add:active{transform:scale(.95)}
+.btn{background:var(--blue);color:#fff;width:100%;margin-top:16px}.btn.s{background:var(--ice);color:var(--blue)}
+.cta{background:#fff;color:var(--navy)}.cta.o{background:transparent;color:#fff;border:1.5px solid #4D86FF}
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:-40px 16px 0}
+.act{background:#fff;border:0;border-radius:20px;padding:16px 6px;font:800 12.5px Sora,sans-serif;color:var(--ink);box-shadow:0 10px 28px #0B1F5A1F;cursor:pointer;transition:transform .15s var(--ease)}
+.act:active{transform:scale(.94)}.act i{display:block;font-style:normal;font-size:28px;margin-bottom:6px}
+.card{background:#fff;border-radius:20px;padding:16px;box-shadow:0 2px 0 var(--line)}
+.route{background:var(--navy);border-radius:24px;margin:0 16px;padding:18px 16px 14px;color:#fff}
+.route svg{width:100%;height:auto;display:block}
+.steps{display:flex;justify-content:space-between;font-size:11.5px;color:#BBD1FF;text-align:center;margin-top:4px}
+.steps b{display:block;color:#fff;font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:10px 14px;font:700 13px Sora,sans-serif;cursor:pointer;transition:all .2s var(--ease)}
+.chip[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+label{display:block;font-weight:700;font-size:13px;margin:18px 0 8px}
+select,textarea,input{width:100%;border:1.5px solid var(--line);background:#fff;color:var(--ink);border-radius:14px;padding:13px;font:500 15px Sora,sans-serif}
+textarea{min-height:80px;resize:vertical}
+.top{display:flex;justify-content:space-between;align-items:center;padding:calc(22px + env(safe-area-inset-top,0px)) 16px 6px}
+.cartb{border:0;background:var(--navy);color:#fff;border-radius:999px;padding:10px 16px;font:800 13px Sora,sans-serif;cursor:pointer}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+.prod{padding:12px}.prod .img{height:92px;border-radius:14px;background:linear-gradient(140deg,var(--ice),#CFE0FF);display:grid;place-items:center;font-size:44px;margin-bottom:10px}
+.prod b{display:block;font-size:13.5px;line-height:1.25;min-height:34px}
+.price{font-weight:800;font-size:18px;margin:6px 0 8px}
+.add{width:100%;border:1.5px solid var(--blue);background:transparent;color:var(--blue);border-radius:12px;padding:9px;font:800 13px Sora,sans-serif;cursor:pointer;transition:all .2s var(--ease)}
+.add.ok{background:var(--blue);color:#fff}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;margin:10px 0 6px}.bar div{height:100%;background:var(--ok);border-radius:4px;transform-origin:left}.bar.w div{background:#D98200}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tag{font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;background:var(--ice);color:var(--blue)}
+.stack>*+*{margin-top:10px}
+nav{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:456px;margin:0 auto;background:#fffffff2;backdrop-filter:blur(14px);border-radius:26px;box-shadow:0 12px 40px #0B1F5A38;display:grid;grid-template-columns:repeat(4,1fr);padding:6px;z-index:20}
+#ind{position:absolute;top:6px;bottom:6px;left:6px;width:calc(25% - 3px);background:var(--ice);border-radius:20px;transition:transform .4s var(--ease)}
+nav button{position:relative;border:0;background:none;color:var(--mut);font:700 11px Sora,sans-serif;padding:8px 0;cursor:pointer}
+nav button i{display:block;font-style:normal;font-size:21px}nav button[aria-current=true]{color:var(--blue)}
+#sheet{position:fixed;inset:0;background:#00103D99;display:none;align-items:flex-end;z-index:50}
+#sheet.on{display:flex}
+#sheet .in{background:#fff;width:100%;max-width:480px;margin:0 auto;border-radius:28px 28px 0 0;padding:20px 16px calc(20px + env(safe-area-inset-bottom,0px));max-height:80vh;overflow:auto}
+.qty{display:flex;align-items:center;gap:10px}.qty button{width:32px;height:32px;border-radius:10px;border:1.5px solid var(--line);background:#fff;font:800 16px Sora;cursor:pointer}
+.ok2{text-align:center;padding:22px 14px}.ok2 .big{font-size:46px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.hide{display:none!important}
+.hero{position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(#4D86FF24 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,#4D86FF24 1px,transparent 1px) 0 0/28px 28px;-webkit-mask:linear-gradient(#000,transparent 85%);mask:linear-gradient(#000,transparent 85%)}.hero>*:not(.orb){position:relative}.orb{position:absolute;border-radius:50%;filter:blur(40px);opacity:.5}
+.heroimg{border-radius:22px;overflow:hidden;margin-top:20px;border:1px solid #5B93FF77;box-shadow:0 0 44px #1E6BFF66}.heroimg img{width:100%;height:210px;object-fit:cover;object-position:50% 35%;display:block}
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px;perspective:900px}.blk{position:relative;border-radius:22px;overflow:hidden;min-height:158px;color:#fff;background:var(--navy);border:1px solid #4D86FF66;box-shadow:0 12px 30px #0B1F5A38}.blk.w{grid-column:span 2;min-height:190px}.blk.sun{border-color:#FFC83D;box-shadow:0 0 30px #FFC83D66}
+.blk img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8}.blk:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,#00103DF2 6%,transparent 70%)}.blk span{position:absolute;z-index:1;left:12px;right:12px;bottom:11px;font:800 14.5px Sora,sans-serif}.blk small{display:block;font:500 11px Sora,sans-serif;color:#BBD1FF;margin-top:2px}
+.gal{display:flex;gap:10px;overflow-x:auto;padding:0 16px 10px;scroll-snap-type:x mandatory}.gal img{flex:none;width:236px;height:300px;object-fit:cover;border-radius:22px;scroll-snap-align:center;box-shadow:0 10px 26px #0B1F5A2E}.tilt{will-change:transform}.prod .img{overflow:hidden}.prod .img img{width:100%;height:100%;object-fit:cover}
+.blk.g{background:linear-gradient(140deg,#0B3FB8,#00103D 70%)}.blk .em{position:absolute;z-index:1;top:12px;left:14px;font-size:40px;filter:drop-shadow(0 0 14px #4D86FF)}
+.vid{flex:none;position:relative;width:150px;height:260px;border:0;padding:0;border-radius:22px;overflow:hidden;background:#00103D;scroll-snap-align:center;cursor:pointer;box-shadow:0 10px 26px #0B1F5A38}.gal .vid img{width:100%;height:100%;opacity:.9}.vid:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,#00103DF0 8%,transparent 60%)}.vid b,.vid span{position:absolute;z-index:1}.vid b{inset:0;display:grid;place-items:center;font-size:34px;color:#fff;text-shadow:0 0 18px #1E6BFF}.vid span{left:10px;right:10px;bottom:10px;color:#fff;font:800 12.5px Sora,sans-serif;text-align:left}
+#vm{position:fixed;inset:0;background:#000000dd;display:flex;align-items:center;justify-content:center;z-index:60}#vm.hide{display:none!important}#vm video{max-height:88vh;max-width:94vw;border-radius:18px;box-shadow:0 0 60px #1E6BFF88}#vx{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:16px;border:0;border-radius:999px;width:42px;height:42px;background:#fff;color:#00103D;font:800 18px Sora,sans-serif;cursor:pointer}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 16px}.g2 img{width:100%;height:150px;object-fit:cover;border-radius:16px;cursor:zoom-in;box-shadow:0 6px 18px #0B1F5A26}#vm img{max-height:88vh;max-width:94vw;border-radius:18px;box-shadow:0 0 60px #1E6BFF88}#vm.img #vp,#vm:not(.img) #vi{display:none}
+.g2 img[data-c="Folletos"]{object-fit:contain;background:#00103D}
 </style></head><body>
-<div id="pg"></div>
-<header><div class="w nav"><a class="logo" href="#inicio"><img src="/icons/icon-192.png" alt="Logo de ServiHouse"><span>Servi<b>House</b></span></a>
-<nav class="links" aria-label="Principal"><a href="#servicios">Servicios</a><a href="#trabajos">Trabajos</a><a href="#proceso">Cómo trabajamos</a><a href="#faq">Preguntas</a></nav><a class="btn b1" href="tel:+593939195170">Llamar</a></div></header>
-<main>
-<section class="hero" id="inicio"><div class="spot" id="spot"></div><div class="w hg">
- <div>
-  <span class="pill"><i></i>Servicio a domicilio · Quito, valles y fuera de la ciudad</span>
-  <h1><span class="wd" style="--i:0">Ingeniería</span> <span class="wd" style="--i:1">en</span> <span class="wd" style="--i:2">electrónica</span> <span class="wd" style="--i:3">y</span> <span class="wd" style="--i:4">línea</span> <span class="wd" style="--i:5">blanca,</span> <em><span class="wd" style="--i:6">en</span> <span class="wd" style="--i:7">tu</span> <span class="wd" style="--i:8">puerta.</span></em></h1>
-  <p class="lead">Reparamos y damos mantenimiento a refrigeradoras, lavadoras, cocinas, aires acondicionados, cuartos fríos y más. Técnicos especializados y garantía en cada servicio.</p>
-  <div class="cta"><a class="btn b1" href="#contacto">Pedir servicio técnico</a><a class="btn b3" href="https://wa.me/593939195170?text=Hola%20ServiHouse%2C%20necesito%20servicio%20t%C3%A9cnico" target="_blank" rel="noopener">WhatsApp</a></div>
-  <div class="tr"><div><b>1 año</b><span>garantía en originales</span></div><div><b>30 días</b><span>garantía en genéricos</span></div><div><b>0939 195 170</b><span>Ing. Elvis Sevilla</span></div></div>
+<div id="splash"><img src="data:image/jpeg;base64,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" alt="ServiHouse"></div>
+<div class="wrap">
+
+<section id="inicio" class="view on">
+ <div class="hero"><i class="orb" style="width:150px;height:150px;right:-40px;top:30px;background:#12B5C9"></i><i class="orb" style="width:120px;height:120px;left:-30px;bottom:20px;background:#1E6BFF"></i>
+  <div class="brand rise"><img src="data:image/jpeg;base64,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" alt="Logo ServiHouse">ServiHouse</div>
+  <h1 class="rise">Tu hogar funcionando, sin complicaciones.</h1>
+  <p class="rise">Técnicos, energía renovable, equipos de segunda mano y garantías en un solo lugar.</p>
+  <div class="chips rise"><a class="cta" href="https://wa.me/593939195170" target="_blank" rel="noopener">WhatsApp</a><a class="cta o" href="tel:+593939195170">Llamar</a></div><div class="heroimg tilt"><img src="assets/hero.jpg" alt="Técnico de ServiHouse en servicio"></div>
  </div>
- <div class="gz"><canvas id="g3d" aria-label="Engranaje 3D animado con el logo de ServiHouse" role="img"></canvas>
-  <div class="fl f1"><i>🛡️</i><div><b>Garantía incluida</b><span>En todos los servicios</span></div></div>
-  <div class="fl f2"><i>📍</i><div><b>Servicio a domicilio</b><span>Quito y valles</span></div></div></div>
-</div></section>
-<div class="mq" aria-hidden="true"><div class="mt"><span>Samsung</span><i>✦</i><span>LG</span><i>✦</i><span>Whirlpool</span><i>✦</i><span>Sony</span><i>✦</i><span>Electrolux</span><i>✦</i><span>Montero</span><i>✦</i><span>Samsung</span><i>✦</i><span>LG</span><i>✦</i><span>Whirlpool</span><i>✦</i><span>Sony</span><i>✦</i><span>Electrolux</span><i>✦</i><span>Montero</span><i>✦</i></div></div>
-<section style="padding:48px 0 0"><div class="w"><div class="st4">
- <div class="sn rv"><b class="cnt" data-n="12">12</b><span>meses de garantía en repuestos originales</span></div>
- <div class="sn rv"><b class="cnt" data-n="30">30</b><span>días de garantía en repuestos genéricos</span></div>
- <div class="sn rv"><b class="cnt" data-n="14">14</b><span>tipos de equipos que atendemos</span></div>
- <div class="sn rv"><b class="cnt" data-n="6">6</b><span>marcas líderes: Samsung, LG, Whirlpool y más</span></div></div></div></section>
-
-<section id="servicios"><div class="w">
- <div class="eb rv">Servicios</div><h2 class="rv">Una solución técnica para cada equipo.</h2><p class="lead rv">Diagnóstico claro, repuestos originales o genéricos y trabajo garantizado.</p>
- <div class="sg">
-  <a class="sc tilt rv" href="#contacto"><svg viewBox="0 0 48 48"><rect x="12" y="4" width="24" height="40" rx="3"/><path d="M12 20h24M17 10v4M17 25v6"/></svg><h3>Refrigeradoras</h3><p>Fallas de enfriamiento, ruidos, fugas y mantenimiento de equipos de todas las marcas.</p></a>
-  <a class="sc tilt rv" href="#contacto"><svg viewBox="0 0 48 48"><rect x="8" y="4" width="32" height="40" rx="3"/><circle cx="24" cy="27" r="10"/><circle cx="24" cy="27" r="5"/><path d="M14 11h8"/></svg><h3>Lavadoras y secadoras</h3><p>No desagua, no centrifuga, no enciende: lo diagnosticamos y lo resolvemos en casa.</p></a>
-  <a class="sc tilt rv" href="#contacto"><svg viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="14" rx="3"/><path d="M10 30q4 6 0 12M24 30q4 6 0 12M38 30q4 6 0 12"/></svg><h3>Aires acondicionados</h3><p>Instalación, mantenimiento y reparación, desde splits hasta sistemas comerciales VRF.</p></a>
-  <a class="sc tilt rv" href="#contacto"><svg viewBox="0 0 48 48"><path d="M24 4v40M6.7 14l34.6 20M6.7 34l34.6-20M18 7l6 5 6-5M18 41l6-5 6 5"/></svg><h3>Cuartos fríos</h3><p>Montaje, unidades condensadoras y evaporadores para refrigeración industrial.</p></a>
-  <a class="sc tilt rv" href="#contacto"><svg viewBox="0 0 48 48"><rect x="14" y="14" width="20" height="20" rx="2"/><path d="M20 14V8M28 14V8M20 34v6M28 34v6M14 20H8M14 28H8M34 20h6M34 28h6"/></svg><h3>Electrónica y TV</h3><p>Reparación de tarjetas, televisores Smart, LCD y plasma, con equipo de diagnóstico.</p></a>
-  <a class="sc tilt rv" href="#contacto"><svg viewBox="0 0 48 48"><path d="M26 4L10 26h12l-2 18 18-24H26z"/></svg><h3>Electricidad y energía</h3><p>Cocinas de inducción, cercos y portones eléctricos, cámaras y energía solar.</p></a>
+ <div class="acts rise">
+  <button class="act" data-go="servicio"><i>🛠️</i>Pedir servicio</button>
+  <button class="act" data-go="tienda"><i>🛒</i>Comprar</button>
+  <button class="act" data-go="garantias"><i>🛡️</i>Garantías</button>
  </div>
-</div></section>
-
-<section class="band"><img data-p src="assets/img-20.jpg" alt="Cuarto frío de dos cámaras terminado" loading="lazy"><div class="w"><div class="eb rv">Refrigeración industrial</div><h2 class="rv">Cuartos fríos que trabajan sin parar.</h2><p class="lead rv">Diseñamos, montamos y damos mantenimiento a cuartos fríos para comercios e industria.</p></div></section>
-
-<section id="trabajos"><div class="w">
- <div class="eb rv">Trabajos reales</div><h2 class="rv">Arrastra y explora en 3D.</h2><p class="lead rv">Casas, locales comerciales y proyectos industriales. Desliza para girar la galería.</p></div>
- <div class="stage rv" id="stage"><div class="ring" id="ring">
-  <div class="it"><img src="assets/img-22.jpg" alt="Sistema VRF Samsung en azotea" loading="lazy"><span>Sistema VRF Samsung</span></div>
-  <div class="it"><img src="assets/img-13.jpg" alt="Montaje de paneles de cuarto frío" loading="lazy"><span>Montaje de cuarto frío</span></div>
-  <div class="it"><img src="assets/img-12.jpg" alt="Climatización de local comercial" loading="lazy"><span>Climatización comercial</span></div>
-  <div class="it"><img src="assets/img-23.jpg" alt="Unidad condensadora industrial" loading="lazy"><span>Unidad condensadora</span></div>
-  <div class="it"><img src="assets/img-17.jpg" alt="Técnico conectando líneas de aire acondicionado" loading="lazy"><span>Instalación de aire</span></div>
-  <div class="it"><img src="assets/img-30.jpg" alt="Evaporadores dentro de un cuarto frío" loading="lazy"><span>Evaporadores instalados</span></div>
-  <div class="it"><img src="assets/img-11.jpg" alt="Reparación de placa de televisor" loading="lazy"><span>Reparación de TV</span></div>
-  <div class="it"><img src="assets/img-10.jpg" alt="Cuarto frío terminado" loading="lazy"><span>Cuarto frío terminado</span></div></div></div>
+ <h2 class="rise">Lo que hacemos</h2><div class="bento"><div class="blk w sun tilt"><img src="assets/solar.jpg" alt="☀️ Energía renovable" loading="lazy"><span>☀️ Energía renovable<small>Paneles solares · cotiza con nosotros</small></span></div><div class="blk  tilt"><img src="assets/aire-instalacion.jpg" alt="❄️ Aires acondicionados" loading="lazy"><span>❄️ Aires acondicionados<small>Instalación y mantenimiento</small></span></div><div class="blk  tilt"><img src="assets/cuarto-frio.jpg" alt="🧊 Cuartos fríos" loading="lazy"><span>🧊 Cuartos fríos<small>Refrigeración industrial</small></span></div><div class="blk  tilt"><img src="assets/lavadora.jpg" alt="🧺 Línea blanca" loading="lazy"><span>🧺 Línea blanca<small>Lavadoras, secadoras, estufas</small></span></div><div class="blk  tilt"><img src="assets/domicilio.jpg" alt="🛠️ A domicilio" loading="lazy"><span>🛠️ A domicilio<small>Vamos a tu casa o negocio</small></span></div><div class="blk w tilt"><img src="assets/generador.jpg" alt="Generador eléctrico instalado" loading="lazy"><span>🔌 Generadores eléctricos<small>A diésel y gasolina · mantenimiento y reparación</small></span></div><div class="blk g tilt"><i class="em">📱</i><span>Celulares<small>Reparación y repuestos</small></span></div><div class="blk g tilt"><i class="em">🥖</i><span>Fríos de panadería<small>Equipos de panadería y refrigeración</small></span></div><div class="blk g tilt"><i class="em">📹</i><span>Cámaras<small>Seguridad electrónica</small></span></div><div class="blk g tilt"><i class="em">⚡</i><span>Cercos eléctricos<small>Instalación y mantenimiento</small></span></div><div class="blk g  tilt"><i class="em">💧</i><span>Calentadores solares<small>Mantenimiento de calentadores de agua</small></span></div><div class="blk g  tilt"><i class="em">🗼</i><span>Tendidos de red eléctrica<small>Instalación y mantenimiento</small></span></div><div class="blk g w tilt"><i class="em">📋</i><span>Proyectos eléctricos<small>Inspección y desarrollo</small></span></div></div><h2 class="rise">Trabajos reales</h2><div class="gal"><img src="assets/local-comercial.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/soldadura.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/aire-exterior.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/refrigeracion.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/aire-techo-1.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/aire-techo-2.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/generadores.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/descarga-generador.jpg" alt="Trabajo de ServiHouse" loading="lazy"><img src="assets/generador-abierto.jpg" alt="Trabajo de ServiHouse" loading="lazy"></div><h2 class="rise">Videos</h2><div class="gal"><button class="vid tilt" data-v="1" aria-label="Ver video: Aires en azotea"><img src="assets/poster-1.jpg" alt="Aires en azotea" loading="lazy"><b>▶</b><span>Aires en azotea</span></button><button class="vid tilt" data-v="2" aria-label="Ver video: Visita técnica en sitio"><img src="assets/poster-2.jpg" alt="Visita técnica en sitio" loading="lazy"><b>▶</b><span>Visita técnica en sitio</span></button><button class="vid tilt" data-v="3" aria-label="Ver video: Televisores y electrónica"><img src="assets/poster-3.jpg" alt="Televisores y electrónica" loading="lazy"><b>▶</b><span>Televisores y electrónica</span></button><button class="vid tilt" data-v="4" aria-label="Ver video: Cámaras de seguridad"><img src="assets/poster-4.jpg" alt="Cámaras de seguridad" loading="lazy"><b>▶</b><span>Cámaras de seguridad</span></button><button class="vid tilt" data-v="5" aria-label="Ver video: Cercos eléctricos"><img src="assets/poster-5.jpg" alt="Cercos eléctricos" loading="lazy"><b>▶</b><span>Cercos eléctricos</span></button><button class="vid tilt" data-v="6" aria-label="Ver video: Condensadora de refrigeración"><img src="assets/poster-6.jpg" alt="Condensadora de refrigeración" loading="lazy"><b>▶</b><span>Condensadora de refrigeración</span></button><button class="vid tilt" data-v="7" aria-label="Ver video: Mantenimiento de vitrina refrigerada"><img src="assets/poster-7.jpg" alt="Mantenimiento de vitrina refrigerada" loading="lazy"><b>▶</b><span>Mantenimiento de vitrina refrigerada</span></button><button class="vid tilt" data-v="8" aria-label="Ver video: Trabajos de ServiHouse"><img src="assets/poster-8.jpg" alt="Trabajos de ServiHouse" loading="lazy"><b>▶</b><span>Trabajos de ServiHouse</span></button><button class="vid tilt" data-v="9" aria-label="Ver video: Reparación de refrigeración"><img src="assets/poster-9.jpg" alt="Reparación de refrigeración" loading="lazy"><b>▶</b><span>Reparación de refrigeración</span></button><button class="vid tilt" data-v="10" aria-label="Ver video: Trabajo en sitio"><img src="assets/poster-10.jpg" alt="Trabajo en sitio" loading="lazy"><b>▶</b><span>Trabajo en sitio</span></button></div>
+ <h2 class="rise">Galería por servicio</h2><div class="chips p" data-g="gal" style="margin-bottom:12px"><button class="chip" aria-pressed="true">Todos</button><button class="chip" aria-pressed="false">Cuartos fríos</button><button class="chip" aria-pressed="false">Aires</button><button class="chip" aria-pressed="false">Línea blanca</button><button class="chip" aria-pressed="false">Electrónica</button><button class="chip" aria-pressed="false">Refrigeración</button><button class="chip" aria-pressed="false">Folletos</button></div><div class="g2" id="g2"><img src="assets/galeria-02.jpg" data-c="Cuartos fríos" alt="Cuarto frío - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-13.jpg" data-c="Cuartos fríos" alt="Cuarto frío - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-07.jpg" data-c="Cuartos fríos" alt="Cuarto frío - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-04.jpg" data-c="Cuartos fríos" alt="Cuarto frío - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-01.jpg" data-c="Aires" alt="Aire acondicionado - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-05.jpg" data-c="Aires" alt="Aire acondicionado - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-09.jpg" data-c="Aires" alt="Aire acondicionado - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-10.jpg" data-c="Aires" alt="Aire acondicionado - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-03.jpg" data-c="Aires" alt="Aire acondicionado - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-08.jpg" data-c="Línea blanca" alt="Lavadora - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-12.jpg" data-c="Línea blanca" alt="Lavadora - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-11.jpg" data-c="Electrónica" alt="Televisor - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-14.jpg" data-c="Electrónica" alt="Televisor - trabajo de ServiHouse" loading="lazy"><img src="assets/galeria-14.jpg" data-c="Aires" alt="Aire acondicionado" loading="lazy"><img src="assets/galeria-15.jpg" data-c="Aires" alt="Aire acondicionado" loading="lazy"><img src="assets/galeria-16.jpg" data-c="Aires" alt="Equipos de aire acondicionado" loading="lazy"><img src="assets/galeria-17.jpg" data-c="Cuartos fríos" alt="Equipo de cuarto frío" loading="lazy"><img src="assets/galeria-18.jpg" data-c="Refrigeración" alt="Reparación de refrigeración" loading="lazy"><img src="assets/galeria-19.jpg" data-c="Electrónica" alt="Televisor" loading="lazy"><img src="assets/folleto-1.jpg" data-c="Folletos" alt="Folleto de ServiHouse" loading="lazy"><img src="assets/folleto-2.jpg" data-c="Folletos" alt="Folleto de ServiHouse" loading="lazy"><img src="assets/folleto-3.jpg" data-c="Folletos" alt="Folleto de ServiHouse" loading="lazy"><img src="assets/galeria-20.jpg" data-c="Cuartos fríos" alt="Cuarto frío en construcción" loading="lazy"><img src="assets/galeria-21.jpg" data-c="Cuartos fríos" alt="Interior de cuarto frío con evaporadores" loading="lazy"><img src="assets/galeria-22.jpg" data-c="Cuartos fríos" alt="Estantería en cuarto frío" loading="lazy"><img src="assets/galeria-23.jpg" data-c="Aires" alt="Instalación de aire en local comercial" loading="lazy"><img src="assets/galeria-24.jpg" data-c="Aires" alt="Equipos Samsung en azotea" loading="lazy"><img src="assets/galeria-25.jpg" data-c="Electrónica" alt="Reparación de tarjetas electrónicas" loading="lazy"><img src="assets/folleto-4.jpg" data-c="Folletos" alt="ServiHouse, ingeniería en electrónica y línea blanca" loading="lazy"></div>
+ <h2 class="rise">Trabajamos con</h2><div class="p" style="display:flex;flex-wrap:wrap;gap:8px"><span class="tag">LG</span><span class="tag">GE</span><span class="tag">Electrolux</span><span class="tag">Samsung</span><span class="tag">Whirlpool</span><span class="tag">Mabe</span><span class="tag">Sony</span><span class="tag">TCL</span><span class="tag">Huawei</span><span class="tag">Daewoo</span><span class="tag">Frigidaire</span><span class="tag">Indurama</span><span class="tag">Carrier</span><span class="tag">Montero</span></div><p class="p mut" style="margin-top:12px">Atendemos dentro y fuera de Quito. Otro número: <a href="tel:+593962172095">096 217 2095</a></p><h2 class="rise">Garantía y pagos</h2><div class="p" style="display:flex;flex-wrap:wrap;gap:8px"><span class="tag">🛡️ 1 año en repuestos originales</span><span class="tag">🔧 30 días en repuestos genéricos</span><span class="tag">💳 Aceptamos todas las tarjetas</span><span class="tag">🏦 Aceptamos transferencias</span><span class="tag">📍 Quito, valles y fuera de la ciudad</span></div>
+ <h2 class="rise">Así de fácil</h2>
+ <div class="route rise">
+  <svg viewBox="0 0 320 90" aria-hidden="true"><path id="rp" d="M20 62 C80 62 80 24 140 24 S230 66 300 30" fill="none" stroke="#2F5FD0" stroke-width="3" stroke-dasharray="2 8" stroke-linecap="round"/>
+   <circle cx="20" cy="62" r="7" fill="#fff"/><circle cx="140" cy="24" r="7" fill="#fff"/><circle cx="300" cy="30" r="9" fill="#1E6BFF" stroke="#fff" stroke-width="3"/>
+   <circle r="6" fill="#5B93FF"><animateMotion dur="3.6s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".5 0 .3 1"><mpath href="#rp"/></animateMotion></circle></svg>
+  <div class="steps"><span><b>Pides</b>en la app</span><span><b>Confirmamos</b>por WhatsApp</span><span><b>Llegamos</b>a tu casa</span></div>
+ </div>
+ <h2 class="rise">Lo que reparamos, instalamos y vendemos</h2>
+ <div class="p rise"><div class="chips"><span class="tag">🧊 Refrigeradores</span><span class="tag">🧺 Lavadoras y secadoras</span><span class="tag">🔥 Estufas y hornos</span><span class="tag">💻 Electrónica y cómputo</span><span class="tag">❄️ Aires acondicionados</span><span class="tag">☀️ Energía renovable</span><span class="tag">📱 Celulares</span><span class="tag">🥖 Fríos de panadería</span><span class="tag">📹 Cámaras</span><span class="tag">⚡ Cercos eléctricos</span><span class="tag">🔌 Generadores</span><span class="tag">💧 Calentadores solares</span><span class="tag">🗼 Tendidos de red eléctrica</span><span class="tag">📋 Proyectos eléctricos</span><span class="tag">🚪 Portones eléctricos</span><span class="tag">💻 Informática</span><span class="tag">🏭 Línea industrial</span><span class="tag">🌬️ HVAC y chillers</span></div></div>
+ <div class="p rise" style="margin-top:22px"><div class="card tilt"><img src="assets/elvis.jpg" alt="Ing. Elvis Sevilla" style="float:right;width:78px;height:78px;border-radius:20px;object-fit:cover;margin:0 0 8px 12px"><b>Ing. Elvis Sevilla · ServiHouse</b><p class="mut" style="margin-top:4px">Atención directa: escríbenos y te respondemos.</p><a class="btn" style="text-decoration:none" href="https://wa.me/593939195170" target="_blank" rel="noopener">Escribir por WhatsApp</a></div></div>
 </section>
 
-<section id="proceso" style="padding-top:20px"><div class="w">
- <div class="eb rv">Cómo trabajamos</div><h2 class="rv">Simple, rápido y sin sorpresas.</h2>
- <div class="steps" id="steps"><div class="ln"></div>
-  <div class="st rv"><b>01</b><h3>Cuéntanos la falla</h3><p>Escríbenos por WhatsApp o llena el formulario con el equipo y el problema.</p></div>
-  <div class="st rv"><b>02</b><h3>Visita a domicilio</h3><p>Un técnico especializado llega a tu casa o negocio y diagnostica en el sitio.</p></div>
-  <div class="st rv"><b>03</b><h3>Reparación garantizada</h3><p>Reparamos con repuestos originales o genéricos y te entregamos garantía.</p></div></div>
- <div class="chips rv"><span>Cocinas de inducción y a gas</span><span>Laptops y computadoras</span><span>Impresoras</span><span>Calefones</span><span>Cámaras de seguridad</span><span>Cercos eléctricos</span><span>Portones eléctricos</span><span>Energía solar</span><span>Equipos de panadería</span></div>
-</div></section>
+<section id="servicio" class="view">
+ <div class="top"><h1 class="rise">Pedir servicio técnico</h1></div>
+ <div class="p">
+ <p class="mut rise">Cuéntanos qué pasó y coordinamos la visita.</p>
+ <div id="form">
+  <label class="rise">¿Qué electrodoméstico falló?</label>
+  <div class="chips rise" data-g="ap"><button class="chip" aria-pressed="true">🧊 Refrigeradores</button><button class="chip" aria-pressed="false">🧺 Lavadoras y secadoras</button><button class="chip" aria-pressed="false">🔥 Estufas y hornos</button><button class="chip" aria-pressed="false">💻 Electrónica y cómputo</button><button class="chip" aria-pressed="false">❄️ Aires acondicionados</button><button class="chip" aria-pressed="false">☀️ Energía renovable</button><button class="chip" aria-pressed="false">📱 Celulares</button><button class="chip" aria-pressed="false">🥖 Fríos de panadería</button><button class="chip" aria-pressed="false">📹 Cámaras</button><button class="chip" aria-pressed="false">⚡ Cercos eléctricos</button><button class="chip" aria-pressed="false">🔌 Generadores</button><button class="chip" aria-pressed="false">💧 Calentadores solares</button><button class="chip" aria-pressed="false">🗼 Tendidos de red eléctrica</button><button class="chip" aria-pressed="false">📋 Proyectos eléctricos</button><button class="chip" aria-pressed="false">🚪 Portones eléctricos</button></div>
+  <label class="rise" for="prob">Problema</label>
+  <select id="prob" class="rise"><option>No enciende</option><option>Hace ruido</option><option>Gotea o no desagua</option><option>No enfría / no calienta</option><option>Otro</option></select>
+  <label class="rise" for="det">Detalles (opcional)</label>
+  <textarea id="det" class="rise" placeholder="Cuéntanos qué pasa"></textarea>
+  <label class="rise">Fecha de la visita</label>
+  <div class="chips rise" data-g="fe"><button class="chip" aria-pressed="true">Hoy</button><button class="chip" aria-pressed="false">Mañana</button><button class="chip" aria-pressed="false">Pasado mañana</button></div>
+  <label class="rise">Horario</label>
+  <div class="chips rise" data-g="ho"><button class="chip" aria-pressed="true">8:00 – 12:00</button><button class="chip" aria-pressed="false">12:00 – 16:00</button><button class="chip" aria-pressed="false">16:00 – 19:00</button></div>
+  <label class="rise" for="dir">Dirección o sector</label>
+  <input id="dir" class="rise" placeholder="Ej. Sur de Quito, Cdla. …" autocomplete="street-address">
+  <button class="btn rise" id="enviar">Continuar</button>
+ </div>
+ <div id="conf" class="card ok2 hide"><div class="big">✅</div><h2 style="margin:8px 0 4px">Solicitud lista</h2><p class="mut" id="ct"></p>
+  <a class="btn" id="wa1" style="text-decoration:none" target="_blank" rel="noopener">Enviar por WhatsApp para confirmar</a>
+  <button class="btn s" id="otra">Editar solicitud</button></div>
+ </div>
+</section>
 
-<section style="padding-top:0"><div class="w"><div class="eb rv">Míranos trabajar</div><h2 class="rv">Videos de servicio.</h2>
- <div class="rail rv">
-  <figure><video controls preload="none" playsinline poster="assets/img-38.jpg"><source src="assets/video-01.mp4" type="video/mp4"></video><figcaption class="cap">Revisión de quemadores</figcaption></figure>
-  <figure><video controls preload="none" playsinline poster="assets/img-39.jpg"><source src="assets/video-02.mp4" type="video/mp4"></video><figcaption class="cap">Cocina funcionando</figcaption></figure>
-  <figure><video controls preload="none" playsinline poster="assets/img-36.jpg"><source src="assets/video-03.mp4" type="video/mp4"></video><figcaption class="cap">Configuración de refrigeradora</figcaption></figure>
-  <figure><video controls preload="none" playsinline poster="assets/img-37.jpg"><source src="assets/video-04.mp4" type="video/mp4"></video><figcaption class="cap">Panel en funcionamiento</figcaption></figure>
-  <figure><video controls preload="none" playsinline poster="assets/img-35.jpg"><source src="assets/video-05.mp4" type="video/mp4"></video><figcaption class="cap">Limpieza de serpentín</figcaption></figure></div></div></section>
+<section id="tienda" class="view">
+ <div class="top"><h1 class="rise">Equipos usados</h1></div>
+ <p class="p mut rise">Equipos de segunda mano. Precio y disponibilidad por WhatsApp.</p><div class="p rise" style="margin:10px 0 14px"><div class="chips" data-g="cat"><button class="chip" aria-pressed="true">Todos</button><button class="chip" aria-pressed="false">Refrigeradores</button><button class="chip" aria-pressed="false">Lavadoras y secadoras</button><button class="chip" aria-pressed="false">Estufas y hornos</button><button class="chip" aria-pressed="false">Electrónica y cómputo</button><button class="chip" aria-pressed="false">Aires acondicionados</button></div></div>
+ <div class="grid" id="prods"></div>
+</section>
 
-<section id="faq" style="padding-top:20px"><div class="w" style="max-width:820px"><div class="eb rv">Preguntas frecuentes</div><h2 class="rv">Resolvemos tus dudas.</h2>
- <div class="rv"><details><summary>¿Qué zonas cubren?</summary><p>Damos servicio a domicilio en Quito, los valles y también fuera de la ciudad.</p></details>
- <details><summary>¿Qué garantía incluye el servicio?</summary><p>Todos nuestros servicios tienen garantía: 1 año en repuestos originales y 30 días en repuestos genéricos.</p></details>
- <details><summary>¿Qué marcas reparan?</summary><p>Trabajamos con las mejores marcas, entre ellas Samsung, LG, Whirlpool, Sony, Electrolux y Montero.</p></details>
- <details><summary>¿Cómo puedo pagar?</summary><p>Aceptamos todas las tarjetas y también transferencias.</p></details>
- <details><summary>¿Qué equipos atienden además de línea blanca?</summary><p>Televisores, computadoras, impresoras, cámaras, cercos y portones eléctricos, cuartos fríos, aires acondicionados, energía solar y equipos de panadería.</p></details></div></div></section>
+<section id="garantias" class="view">
+ <div class="top"><h1 class="rise">Mis garantías</h1></div>
+ <div class="p"><p class="mut rise">Registra tus compras y ve cuánto te queda de cobertura.</p>
+ <div class="stack rise" id="gars" style="margin-top:14px"></div>
+ <label class="rise">Registrar un producto</label>
+ <input id="gn" class="rise" placeholder="Producto (ej. Lavadora 10 kg)">
+ <div class="row rise" style="margin-top:10px;align-items:stretch"><input id="gd" type="date"><select id="gm" style="width:42%"><option value="12">12 meses</option><option value="24">24 meses</option><option value="36">36 meses</option></select></div>
+ <button class="btn s rise" id="reg">Guardar producto</button><p class="mut" id="rm" style="margin-top:8px"></p></div>
+</section>
+</div>
 
-<section id="contacto" style="padding-top:20px"><div class="w"><div class="ct rv">
- <div><div class="eb">Contacto</div><h2>¿Tu equipo falló? Hablemos hoy.</h2><p class="lead">Cuéntanos qué pasa y te respondemos por WhatsApp para coordinar la visita.</p>
-  <div class="cl"><a href="tel:+593939195170">📞<span>0939 195 170<small>Ing. Elvis Sevilla</small></span></a><a href="https://wa.me/593939195170" target="_blank" rel="noopener">💬<span>Escribir por WhatsApp<small>Atención rápida</small></span></a></div></div>
- <form class="f" id="fm"><div><label for="a">Nombre</label><input id="a" required autocomplete="name"></div>
-  <div><label for="b">Equipo</label><select id="b"><option>Refrigerador</option><option>Lavadora o secadora</option><option>Cocina u horno</option><option>Aire acondicionado</option><option>Cuarto frío o refrigeración</option><option>TV o electrónica</option><option>Otro</option></select></div>
-  <div><label for="c">¿Qué le pasa?</label><textarea id="c" placeholder="Ej. No enfría, hace ruido, no enciende…"></textarea></div>
-  <div><label for="d">Sector o dirección</label><input id="d" autocomplete="street-address"></div>
-  <button class="btn b1" type="submit">Enviar solicitud por WhatsApp</button></form></div></div></section>
-</main>
-<footer><div class="w fw"><a class="logo" href="#inicio"><img src="/icons/icon-192.png" alt=""><span>Servi<b>House</b></span></a><span>Ingeniería en electrónica y línea blanca · Quito, valles y fuera de la ciudad</span><span>© 2026 ServiHouse</span></div></footer>
-<div class="bar"><a class="b2" style="border:1.5px solid var(--line)" href="tel:+593939195170">📞 Llamar</a><a style="background:var(--blue);color:#fff" href="#contacto">Pedir servicio</a><a class="b3" href="https://wa.me/593939195170" target="_blank" rel="noopener">WhatsApp</a></div>
+<div id="vm" class="hide"><button id="vx" aria-label="Cerrar video">✕</button><video id="vp" controls playsinline></video><img id="vi" alt=""></div>
+<nav><div id="ind"></div>
+ <button data-go="inicio" aria-current="true"><i>🏠</i>Inicio</button><button data-go="servicio"><i>🛠️</i>Servicio</button><button data-go="tienda"><i>🛒</i>Tienda</button><button data-go="garantias"><i>🛡️</i>Garantías</button></nav>
+
+
 <script>
-(function(){var d=document,$=function(s){return d.querySelector(s)},$$=function(s){return[].slice.call(d.querySelectorAll(s))},RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
-d.documentElement.classList.add('js');
-/* reveal + contadores */
-var rv=$$('.rv'),cn=$$('.cnt');function all(){rv.forEach(function(x){x.classList.add('in')})}
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');io.unobserve(e.target);
- if(e.target.querySelector&&e.target.querySelector('.cnt')){var c=e.target.querySelector('.cnt'),n=+c.dataset.n,t0=performance.now();if(!RM)(function f(t){var p=Math.min((t-t0)/1400,1);c.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(t0)}})},{threshold:.12});rv.forEach(function(x){io.observe(x)});setTimeout(all,4000)}else all();
-/* tilt 3D */
-$$('.tilt').forEach(function(el){el.addEventListener('pointermove',function(e){if(RM)return;var r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;el.style.transform='perspective(800px) rotateX('+(-y*14)+'deg) rotateY('+(x*16)+'deg)';el.style.setProperty('--gx',(x+.5)*100+'%');el.style.setProperty('--gy',(y+.5)*100+'%')});el.addEventListener('pointerleave',function(){el.style.transform=''})});
-/* scroll: progreso, parallax, línea */
-var tk=0,pg=$('#pg'),st=$('#steps');function onS(){var m=d.documentElement.scrollHeight-innerHeight;pg.style.transform='scaleX('+(m>0?scrollY/m:0)+')';
- if(!RM)$$('[data-p]').forEach(function(e){var r=e.parentNode.getBoundingClientRect();e.style.transform='translate3d(0,'+((r.top+r.height/2-innerHeight/2)*-.14)+'px,0)'});
- var r=st.getBoundingClientRect(),p=Math.max(0,Math.min(1,(innerHeight*.78-r.top)/(r.height+40)));st.style.setProperty('--p',p)}
-addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(function(){tk=0;onS()})}},{passive:true});onS();
-/* foco que sigue al cursor */
-var hero=$('#inicio');hero.addEventListener('pointermove',function(e){var r=hero.getBoundingClientRect();hero.style.setProperty('--mx',(e.clientX-r.left)+'px');hero.style.setProperty('--my',(e.clientY-r.top)+'px')});
-/* galería 3D */
-var ring=$('#ring'),its=$$('.it'),n=its.length,ang=0,vel=.18,R=300,drag=0,lx=0,stg=$('#stage'),on=1;
-function lay(){var w=its[0].offsetWidth;R=Math.round(w/2/Math.tan(Math.PI/n))+24;its.forEach(function(it,i){it.style.transform='rotateY('+i*360/n+'deg) translateZ('+R+'px)'})}lay();addEventListener('resize',lay);
-stg.addEventListener('pointerdown',function(e){drag=1;lx=e.clientX});addEventListener('pointerup',function(){drag=0});
-addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-lx;lx=e.clientX;ang+=dx*.35;vel=dx*.12});
-if('IntersectionObserver' in window)new IntersectionObserver(function(e){on=e[0].isIntersecting}).observe(stg);
-(function sp(){if(on&&!RM){if(!drag){ang+=vel;vel+=(.18-vel)*.03}}ring.style.transform='translateZ(-'+R+'px) rotateY('+ang+'deg)';requestAnimationFrame(sp)})();
-/* engranaje 3D (canvas) */
-var cv=$('#g3d'),cx=cv.getContext('2d'),logo=new Image();logo.src='/icons/icon-192.png';
-var W,H,D=Math.min(devicePixelRatio||1,2),px=0,py=0,gv=1,N=14,P=[],i,q;
-for(i=0;i<N;i++){var a0=i/N*6.2832,sw=6.2832/N;[[0,.78],[.16,1],[.5,1],[.66,.78]].forEach(function(k){var t=a0+k[0]*sw;P.push([Math.cos(t)*k[1],Math.sin(t)*k[1]])})}
-function size(){var r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*D;cv.height=H*D;cx.setTransform(D,0,0,D,0,0)}size();addEventListener('resize',size);
-d.addEventListener('pointermove',function(e){px=e.clientX/innerWidth-.5;py=e.clientY/innerHeight-.5});
-function pr(x,y,z,g,ax,ay){var c=Math.cos(g),s=Math.sin(g),X=x*c-y*s,Y=x*s+y*c,c1=Math.cos(ax),s1=Math.sin(ax),Y2=Y*c1-z*s1,Z2=Y*s1+z*c1,c2=Math.cos(ay),s2=Math.sin(ay),X3=X*c2+Z2*s2,Z3=-X*s2+Z2*c2,f=3.2/(3.2-Z3),u=Math.min(W,H)*.3;return[W/2+X3*f*u,H/2-Y2*f*u,Z3]}
-function line(pts,al,col,lw){cx.beginPath();pts.forEach(function(p,j){j?cx.lineTo(p[0],p[1]):cx.moveTo(p[0],p[1])});cx.strokeStyle=col.replace('A',al);cx.lineWidth=lw||1.5;cx.stroke()}
-function circ(r,z,g,ax,ay,seg){var o=[];for(var j=0;j<=seg;j++){var t=j/seg*6.2832;o.push(pr(Math.cos(t)*r,Math.sin(t)*r,z,g,ax,ay))}return o}
-function draw(t){cx.clearRect(0,0,W,H);cx.globalCompositeOperation='lighter';cx.shadowColor='#2F7BFF';cx.shadowBlur=14;
- var g=t*.0005,ax=.42+py*.7+Math.sin(t*.0006)*.1,ay=Math.sin(t*.0004)*.55+px*1.1,Z=.2,B='rgba(91,162,255,A)',C='rgba(56,225,255,A)';
- var bk=P.map(function(p){return pr(p[0],p[1],-Z,g,ax,ay)}),fr=P.map(function(p){return pr(p[0],p[1],Z,g,ax,ay)});
- bk.push(bk[0]);line(bk,.45,B,1.2);
- for(i=0;i<P.length;i+=2)line([bk[i],fr[i]],.3,B,1);
- cx.beginPath();fr.forEach(function(p,j){j?cx.lineTo(p[0],p[1]):cx.moveTo(p[0],p[1])});cx.closePath();var gr=cx.createRadialGradient(W/2,H/2,5,W/2,H/2,W*.36);gr.addColorStop(0,'rgba(47,123,255,.05)');gr.addColorStop(1,'rgba(47,123,255,.22)');cx.fillStyle=gr;cx.fill();
- fr.push(fr[0]);line(fr,.95,C,2);
- line(circ(.62,Z,g,ax,ay,40),.7,B,1.4);line(circ(.3,Z,g,ax,ay,28),.9,C,1.6);
- for(i=0;i<6;i++){var s=i*1.0472;line([pr(Math.cos(s)*.3,Math.sin(s)*.3,Z,g,ax,ay),pr(Math.cos(s)*.62,Math.sin(s)*.62,Z,g,ax,ay)],.6,B,1.2)}
- [[1.45,.5,.2],[1.75,-.7,.9]].forEach(function(o,k){var rg=circ(o[0],0,0,ax+o[1],ay+o[2]+t*.0002*(k?-1:1),90);line(rg,.25,k?C:B,1);
-  for(var m=0;m<3;m++){var ph=(t*.0006*(k?-1:1)+m*2.09+k)%6.2832,pp=pr(Math.cos(ph)*o[0],Math.sin(ph)*o[0],0,0,ax+o[1],ay+o[2]+t*.0002*(k?-1:1));cx.beginPath();cx.arc(pp[0],pp[1],3.2,0,6.2832);cx.fillStyle=C.replace('A',1);cx.fill()}});
- cx.globalCompositeOperation='source-over';cx.shadowBlur=0;
- if(logo.complete&&logo.naturalWidth){var c=pr(0,0,Z+.02,g,ax,ay),sz=Math.min(W,H)*.2*(3.2/(3.2-c[2]));cx.save();cx.translate(c[0],c[1]);cx.scale(Math.max(.35,Math.cos(ay*.7)),1);cx.beginPath();cx.arc(0,0,sz*.5,0,6.2832);cx.clip();cx.drawImage(logo,-sz*.5,-sz*.5,sz,sz);cx.restore();cx.beginPath();cx.arc(c[0],c[1],sz*.5*Math.max(.35,Math.cos(ay*.7)),0,6.2832);}
-}
-if('IntersectionObserver' in window)new IntersectionObserver(function(e){gv=e[0].isIntersecting}).observe(cv);
-if(RM){logo.onload=function(){draw(900)};draw(900)}else(function lp(t){if(gv)draw(t);requestAnimationFrame(lp)})(0);
-/* formulario */
-$('#fm').addEventListener('submit',function(e){e.preventDefault();var g=function(i){return d.getElementById(i).value.trim()};
- var t='Hola ServiHouse, necesito servicio técnico.\nNombre: '+g('a')+'\nEquipo: '+g('b')+(g('c')?'\nProblema: '+g('c'):'')+(g('d')?'\nSector: '+g('d'):'');open('https://wa.me/593939195170?text='+encodeURIComponent(t),'_blank')});
-if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})});
-})();
+var $=function(s){return document.querySelector(s)},$$=function(s){return[].slice.call(document.querySelectorAll(s))};
+var WA='593939195170',RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function an(e,k,o){if(RM||!e.animate)return;return e.animate(k,Object.assign({duration:460,easing:'cubic-bezier(.2,.8,.2,1)',fill:'backwards'},o||{}))}
+function rise(id){$$('#'+id+' .rise').forEach(function(e,i){an(e,[{opacity:0,transform:'translateY(16px)'},{opacity:1,transform:'none'}],{delay:i*40})})}
+var ids=['inicio','servicio','tienda','garantias'];
+function go(id){$$('.view').forEach(function(v){v.classList.toggle('on',v.id===id)});
+ $$('nav button').forEach(function(b){b.setAttribute('aria-current',b.dataset.go===id)});
+ $('#ind').style.transform='translateX('+ids.indexOf(id)*100+'%)';window.scrollTo(0,0);rise(id);if(id==='garantias')gars()}
+document.addEventListener('click',function(e){var g=e.target.closest('[data-go]');if(g)return go(g.dataset.go);
+ var c=e.target.closest('.chip');if(c){var p=c.parentElement;$$('[data-g="'+p.dataset.g+'"] .chip').forEach(function(x){x.setAttribute('aria-pressed',x===c)});if(p.dataset.g==='cat'){cat=c.textContent;prods()}}});
+function sel(g){return $('[data-g="'+g+'"] [aria-pressed="true"]').textContent}
+function wa(t){return'https://wa.me/'+WA+'?text='+encodeURIComponent(t)}
+/* Servicio */
+$('#enviar').onclick=function(){var d=$('#det').value.trim(),dir=$('#dir').value.trim();
+ var t='Hola ServiHouse, quiero solicitar servicio técnico.\nEquipo: '+sel('ap')+'\nProblema: '+$('#prob').value+(d?'\nDetalles: '+d:'')+'\nVisita: '+sel('fe')+', '+sel('ho')+(dir?'\nDirección: '+dir:'');
+ $('#ct').textContent=sel('ap')+' · '+$('#prob').value+'. '+sel('fe')+', '+sel('ho')+'.';$('#wa1').href=wa(t);
+ $('#form').classList.add('hide');$('#conf').classList.remove('hide');an($('#conf'),[{opacity:0,transform:'scale(.94)'},{opacity:1,transform:'none'}])};
+$('#otra').onclick=function(){$('#conf').classList.add('hide');$('#form').classList.remove('hide')};
+/* Tienda */
+var P=[["🧊","Refrigeradores de segunda mano","Refrigeradores"],["assets/lavadora.jpg","Lavadoras y secadoras de segunda mano","Lavadoras y secadoras"],["🔥","Estufas y hornos de segunda mano","Estufas y hornos"],["💻","Electrónica y cómputo de segunda mano","Electrónica y cómputo"],["assets/aire-exterior.jpg","Aires acondicionados de segunda mano","Aires acondicionados"]],cat='Todos';
+function prods(){$('#prods').innerHTML=P.map(function(p,i){return(cat==='Todos'||p[2]===cat)?'<div class="card prod tilt"><div class="img">'+(p[0].indexOf('assets')==0?'<img src="'+p[0]+'" alt="'+p[1]+'" loading="lazy">':p[0])+'</div><b>'+p[1]+'</b><p class="mut" style="margin:6px 0 8px">Precio por WhatsApp</p><button class="add" data-i="'+i+'">Consultar</button></div>':''}).join('');
+ $$('#prods .prod').forEach(function(e,i){an(e,[{opacity:0,transform:'translateY(18px) scale(.97)'},{opacity:1,transform:'none'}],{delay:i*45})})}
+$('#prods').onclick=function(e){var b=e.target.closest('.add');if(b)open(wa('Hola ServiHouse, me interesa: '+P[b.dataset.i][1]+'. ¿Qué tienen disponible y a qué precio?'),'_blank')};
+/* Garantías */
+function load(){try{return JSON.parse(localStorage.getItem('sh_g')||'[]')}catch(e){return[]}}
+function gars(){var L=load(),now=Date.now();
+ $('#gars').innerHTML=L.length?L.map(function(g){var end=new Date(g.d);end.setMonth(end.getMonth()+g.m);var left=Math.ceil((end-now)/864e5),tot=g.m*30.4,pct=Math.max(0,Math.min(1,left/tot)),w=left<60;
+  return'<div class="card"><div class="row"><b>'+g.n.replace(/</g,'&lt;')+'</b><span class="tag">'+(left<=0?'Vencida':w?'Por vencer':'Vigente')+'</span></div><div class="bar'+(w?' w':'')+'"><div style="width:'+pct*100+'%"></div></div><p class="mut">'+(left>0?'Te quedan '+left+' días de garantía':'La garantía terminó')+'</p></div>'}).join(''):'<div class="card"><b>Aún no tienes productos</b><p class="mut">Registra tu primera compra abajo y te mostramos cuánto dura su garantía.</p></div>';
+ $$('#gars .bar div').forEach(function(e,i){an(e,[{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:900,delay:200+i*120})})}
+$('#reg').onclick=function(){var n=$('#gn').value.trim(),d=$('#gd').value;if(!n||!d){$('#rm').textContent='Escribe el producto y la fecha de compra.';return}
+ var L=load();L.push({n:n,d:d,m:+$('#gm').value});try{localStorage.setItem('sh_g',JSON.stringify(L))}catch(e){}
+ $('#gn').value='';$('#rm').textContent='Producto guardado en este teléfono.';gars()};
+if(RM){var s=document.querySelector('svg');if(s&&s.pauseAnimations)s.pauseAnimations()}
+$$('.vid').forEach(function(b){b.onclick=function(){var v=$('#vp');$('#vm').classList.remove('img');v.src='assets/video-'+b.dataset.v+'.mp4';$('#vm').classList.remove('hide');if(window.gsap&&!RM)gsap.from('#vp',{scale:.8,opacity:0,rotationX:-20,transformPerspective:800,duration:.5,ease:'power3.out'});v.play()}});
+function vclose(){var v=$('#vp');v.pause();v.removeAttribute('src');v.load();$('#vm').classList.add('hide');$('#vm').classList.remove('img')}
+$('#vx').onclick=vclose;$('#vm').onclick=function(e){if(e.target.id==='vm')vclose()};
+$('#g2').onclick=function(e){var i=e.target.closest('img');if(!i)return;$('#vi').src=i.src;$('#vm').classList.add('img');$('#vm').classList.remove('hide');if(window.gsap&&!RM)gsap.from('#vi',{scale:.8,opacity:0,rotationX:-20,transformPerspective:800,duration:.5,ease:'power3.out'})};
+$('[data-g="gal"]').addEventListener('click',function(e){var c=e.target.closest('.chip');if(!c)return;var t=c.textContent,v=[];$$('#g2 img').forEach(function(i){var on=t==='Todos'||i.dataset.c===t;i.classList.toggle('hide',!on);if(on)v.push(i)});if(window.gsap&&!RM)gsap.from(v,{opacity:0,y:30,rotationX:-25,transformPerspective:700,duration:.5,stagger:.05,ease:'power3.out'})});
+prods();
+window.addEventListener('load',function(){setTimeout(function(){var s=$('#splash');var a=an(s,[{opacity:1},{opacity:0}],{duration:450,fill:'forwards'});if(a)a.onfinish=function(){s.remove()};else s.remove();rise('inicio')},RM?0:900)});
+window.addEventListener('load',function(){if(!window.gsap||RM)return;gsap.registerPlugin(ScrollTrigger);
+gsap.to('.orb',{x:'random(-16,16)',y:'random(-18,18)',duration:4,repeat:-1,yoyo:true,ease:'sine.inOut',stagger:.7});
+gsap.from('.heroimg',{y:40,opacity:0,rotationX:-28,transformPerspective:800,duration:1.1,delay:1.1,ease:'power3.out'});
+gsap.utils.toArray('.blk').forEach(function(b){gsap.from(b,{scrollTrigger:{trigger:b,start:'top 94%'},y:50,opacity:0,rotationX:-20,transformPerspective:800,duration:.8,ease:'power3.out'})});
+gsap.to('.sun',{boxShadow:'0 0 44px #FFC83DAA',duration:1.6,repeat:-1,yoyo:true,ease:'sine.inOut'});
+var last,rs=function(){if(last)gsap.to(last,{rotationX:0,rotationY:0,duration:.5})};
+document.addEventListener('pointermove',function(e){var t=e.target.closest('.tilt');if(last&&last!==t)rs();last=t;if(!t)return;var r=t.getBoundingClientRect();gsap.to(t,{rotationY:((e.clientX-r.left)/r.width-.5)*14,rotationX:-((e.clientY-r.top)/r.height-.5)*14,transformPerspective:700,duration:.35})});
+['pointerup','pointercancel'].forEach(function(n){document.addEventListener(n,rs)})});
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}
 </script></body></html>
