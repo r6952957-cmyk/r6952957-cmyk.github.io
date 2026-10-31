@@ -1,0 +1,12 @@
+SERVIHOUSE - ARCHIVOS PARA ACTUALIZAR GITHUB
+
+Este paquete contiene SOLO los 5 archivos nuevos o modificados para habilitar el registro de contactos. No reemplaces todos los recursos multimedia ni borres el resto del repositorio.
+
+Archivos:
+- index.html (reemplaza el archivo de la raíz)
+- package.json (nuevo archivo en la raíz)
+- api/contactos.js (nuevo; crea la carpeta api)
+- sql/contactos.sql (nuevo; crea la carpeta sql)
+- privacidad/index.html (nuevo; crea la carpeta privacidad)
+
+Después de subirlos, Vercel debe desplegar el commit. Configura DATABASE_URL como variable de entorno en Vercel y crea la tabla ejecutando sql/contactos.sql en Neon. No publiques credenciales en GitHub.

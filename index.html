@@ -219,11 +219,19 @@ body.fp,body.fp *{cursor:none!important}body.fp input,body.fp textarea,body.fp s
 <section id="contacto" style="padding-top:20px"><div class="w"><div class="ct rv">
  <div><div class="eb">Contacto</div><h2>¿Tu equipo falló? Hablemos hoy.</h2><p class="lead">Cuéntanos qué pasa y te respondemos por WhatsApp para coordinar la visita.</p>
   <div class="cl"><a href="tel:+593939195170">📞<span>0939 195 170<small>Ing. Elvis Sevilla</small></span></a><a href="https://wa.me/593939195170" target="_blank" rel="noopener">💬<span>Escribir por WhatsApp<small>Atención rápida</small></span></a></div></div>
- <form class="f" id="fm"><div><label for="a">Nombre</label><input id="a" required autocomplete="name"></div>
-  <div><label for="b">Equipo</label><select id="b"><option>Refrigerador</option><option>Lavadora o secadora</option><option>Cocina u horno</option><option>Aire acondicionado</option><option>Cuarto frío o refrigeración</option><option>TV o electrónica</option><option>Otro</option></select></div>
-  <div><label for="c">¿Qué le pasa?</label><textarea id="c" placeholder="Ej. No enfría, hace ruido, no enciende…"></textarea></div>
-  <div><label for="d">Sector o dirección</label><input id="d" autocomplete="street-address"></div>
-  <button class="btn b1" type="submit">Enviar solicitud por WhatsApp</button></form></div></div></section>
+ <form class="f" id="fm">
+   <div><label for="a">Nombre</label><input id="a" maxlength="100" required autocomplete="name"></div>
+   <div><label for="b">Equipo</label><select id="b"><option>Refrigerador</option><option>Lavadora o secadora</option><option>Cocina u horno</option><option>Aire acondicionado</option><option>Cuarto frío o refrigeración</option><option>TV o electrónica</option><option>Otro</option></select></div>
+   <div><label for="c">¿Qué le pasa?</label><textarea id="c" maxlength="2000" placeholder="Ej. No enfría, hace ruido, no enciende…"></textarea></div>
+   <div><label for="d">Sector o dirección</label><input id="d" maxlength="200" autocomplete="street-address"></div>
+   <div style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden" aria-hidden="true"><label for="website">No completar</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+   <label style="display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.5;color:var(--mut);margin:4px 0">
+    <input id="consentimiento" type="checkbox" required style="width:18px;min-width:18px;margin:2px 0 0;padding:0">
+    <span>Autorizo a ServiHouse a utilizar mis datos de contacto y registrar mi IP pública y la fecha para gestionar esta solicitud y prevenir envíos abusivos. <a href="/privacidad/" target="_blank" rel="noopener" style="color:var(--cy);text-decoration:underline">Leer aviso de privacidad</a>.</span>
+   </label>
+   <p id="fm-status" role="status" aria-live="polite" style="font-size:13px;color:var(--mut);margin:0"></p>
+   <button class="btn b1" type="submit">Enviar solicitud por WhatsApp</button>
+  </form></div></div></section>
 </main>
 <div class="sheet" id="sh"><div class="in"><div class="rw"><h3 style="font-size:22px">Mi cotización</h3><button class="cb" id="cx" type="button">Cerrar</button></div><div id="cl2" class="cls"></div><a class="btn b3" id="wq" href="#" target="_blank" rel="noopener" style="margin-top:16px;width:100%">Enviar cotización por WhatsApp</a></div></div>
 <footer><div class="w fw"><a class="logo" href="#inicio"><img src="/icons/icon-192.png" alt=""><span>Servi<b>House</b></span></a><span>Ingeniería en electrónica y línea blanca · Quito, valles y fuera de la ciudad</span><span>© 2026 ServiHouse</span></div><nav class="w fl2" aria-label="Servicios de reparación"><a href="/reparacion-refrigeradoras-quito/">Reparación de refrigeradoras</a><a href="/reparacion-lavadoras-secadoras-quito/">Reparación de lavadoras y secadoras</a><a href="/reparacion-cocinas-induccion-gas-quito/">Reparación de cocinas de inducción y a gas</a><a href="/reparacion-aires-acondicionados-quito/">Instalación y reparación de aires acondicionados</a><a href="/reparacion-televisores-electronica-quito/">Reparación de televisores y electrónica</a><a href="/cuartos-frios-refrigeracion-industrial-quito/">Montaje y mantenimiento de cuartos fríos</a></nav></footer>
@@ -332,8 +340,34 @@ function lqGo(target,x,y){var L=RM||busy?false:lqInit();if(!L){jump(target);retu
  (function a(t){var k=Math.min((t-t0)/560,1);lqDraw(ease(k),ox,oy,t*.001);if(k<1)return requestAnimationFrame(a);jump(target);var t1=performance.now();(function b(t){var k2=Math.min((t-t1)/720,1);lqDraw(1-ease(k2),.5,.5,t*.001);if(k2<1)return requestAnimationFrame(b);c.style.display='none';busy=0})(t1)})(t0)}
 d.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href');if(id.length<2)return;var t=d.querySelector(id);if(!t)return;e.preventDefault();lqGo(t,e.clientX||innerWidth/2,e.clientY||innerHeight/2)});
 /* formulario */
-$('#fm').addEventListener('submit',function(e){e.preventDefault();var g=function(i){return d.getElementById(i).value.trim()};
- var t='Hola ServiHouse, necesito servicio técnico.\nNombre: '+g('a')+'\nEquipo: '+g('b')+(g('c')?'\nProblema: '+g('c'):'')+(g('d')?'\nSector: '+g('d'):'');open('https://wa.me/593939195170?text='+encodeURIComponent(t),'_blank')});
+$('#fm').addEventListener('submit',async function(e){
+ e.preventDefault();
+ var g=function(i){return d.getElementById(i).value.trim()};
+ var status=$('#fm-status'),button=$('#fm button[type="submit"]');
+ var t='Hola ServiHouse, necesito servicio técnico.\nNombre: '+g('a')+'\nEquipo: '+g('b')+(g('c')?'\nProblema: '+g('c'):'')+(g('d')?'\nSector: '+g('d'):'');
+ var waUrl='https://wa.me/593939195170?text='+encodeURIComponent(t);
+ var waTab=window.open('about:blank','_blank');
+ button.disabled=true;button.textContent='Registrando solicitud…';
+ status.textContent='Guardando tu solicitud de forma segura…';
+ try{
+  var response=await fetch('https://servihouse.vercel.app/api/contactos',{
+   method:'POST',
+   headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({
+    nombre:g('a'),equipo:g('b'),problema:g('c'),sector:g('d'),
+    consentimiento:$('#consentimiento').checked,website:g('website')
+   })
+  });
+  var result=await response.json().catch(function(){return {}});
+  if(!response.ok)throw new Error(result.error||'No se pudo registrar la solicitud');
+  status.textContent='Solicitud registrada. Abriendo WhatsApp…';
+ }catch(err){
+  status.textContent='No se pudo guardar el registro automático. Puedes continuar por WhatsApp.';
+  alert('No pudimos registrar automáticamente tu solicitud. Se abrirá WhatsApp para que puedas enviarla.');
+ }
+ button.disabled=false;button.textContent='Enviar solicitud por WhatsApp';
+ if(waTab){waTab.location.href=waUrl;}else{window.location.href=waUrl;}
+});
 if('serviceWorker' in navigator)addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){})});
 })();
 </script></body></html>
